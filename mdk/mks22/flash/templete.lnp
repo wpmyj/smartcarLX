@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp
+".\mks22\flash\system_mks22f25612.o"
+".\mks22\flash\startup_mks22f25612.o"
+".\mks22\flash\main.o"
+".\mks22\flash\adc.o"
+".\mks22\flash\common.o"
+".\mks22\flash\crc.o"
+".\mks22\flash\dma.o"
+".\mks22\flash\flash.o"
+".\mks22\flash\flexcan.o"
+".\mks22\flash\flexio.o"
+".\mks22\flash\gpio.o"
+".\mks22\flash\i2c.o"
+".\mks22\flash\lptmr.o"
+".\mks22\flash\lpuart.o"
+".\mks22\flash\mcg.o"
+".\mks22\flash\pit.o"
+".\mks22\flash\rtc.o"
+".\mks22\flash\spi.o"
+".\mks22\flash\tpm.o"
+".\mks22\flash\uart.o"
+".\mks22\flash\wdog.o"
+--library_type=microlib --strict --scatter ".\mks22\flash\templete.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\templete.map" -o .\mks22\flash\templete.axf
