@@ -1,38 +1,30 @@
-#include <stdio.h>
+/*!
+ *     COPYRIGHT NOTICE
+ *     Copyright (c) 2013,????
+ *     All rights reserved.
+ *     ????:???? http://www.vcan123.com
+ *
+ *     ??????,????????????????,????,????????,
+ *     ???????????????????
+ *
+ * @file       main.c
+ * @brief      ??KL26 ?????
+ * @author     ????
+ * @version    v5.2
+ * @date       2014-10-26
+ */
 
 #include "common.h"
-#include "gpio.h"
-#include "uart.h"
+#include "include.h"
 
-
-int main(void)
+#define MOTOR_HZ    (10*1000)
+ 
+void main()
 {
-	DelayInit(); 
-	GPIO_Init(HW_GPIOC,1,kGPIO_OPPL);
-	GPIO_Init(HW_GPIOC,2,kGPIO_OPPL);
-	UART_Init(UART0_RX_PD06_TX_PD07,115200);
-	printf("GPIO Interrupt, press key to test\r\n");
-	uint32_t i=0;
-	
-	while(i<15)
-	{
-		GPIO_PinToggle(HW_GPIOC,2);
-		GPIO_SetIntMode(HW_GPIOC, 2, kGPIO_Int_RE, true);
-		DelayMs(500);
-		i++;
-	}	
-}
-
-void PORTC_IRQHandler(void)
-{
-	PORTC->ISFR = (1<<2);
-	printf("ÖÐ¶ÏÀ´ÁË\r\n");
-	uint16_t i=0;
-	while(i<6)
-	{
-		GPIO_PinToggle(HW_GPIOC,1);
-		DelayMs(500);
-		i++;
-	}
-	return;
+    tpm_pwm_init(TPM0,TPM_CH0,10*1000,0);
+    tpm_pwm_init(TPM2,TPM_CH0,80,8280);
+    //tpm_pwm_init(TPM2,TPM_CH0,100,8590);
+    gpio_init(PTC1,GPO,1);
+    gpio_init(PTC2,GPO,0);
+    tpm_pwm_duty(TPM0,TPM_CH0,70);
 }
