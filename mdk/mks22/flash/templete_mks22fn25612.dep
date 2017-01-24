@@ -1,262 +1,0 @@
-Dependencies for Project 'templete', Target 'mks22fn25612': (DO NOT MODIFY !)
-F (..\..\..\..\Libraries\startup\src\system_MKS22F25612.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\system_mks22f25612.o --omf_browse .\mks22\flash\system_mks22f25612.crf --depend .\mks22\flash\system_mks22f25612.d)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\startup\src\mdk\startup_MKS22F25612.s)(0x583C4324)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 522" --pd "MKS22FN256xxx12 SETA 1"--list .\startup_mks22f25612.lst --xref -o .\mks22\flash\startup_mks22f25612.o --depend .\mks22\flash\startup_mks22f25612.d)
-F (..\src\main.c)(0x58764B30)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\main.o --omf_browse .\mks22\flash\main.crf --depend .\mks22\flash\main.d)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\gpio.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\uart.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\adc.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\adc.o --omf_browse .\mks22\flash\adc.crf --depend .\mks22\flash\adc.d)
-I (..\..\..\..\Libraries\drivers\inc\adc.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\common.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\common.o --omf_browse .\mks22\flash\common.crf --depend .\mks22\flash\common.d)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\string.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-F (..\..\..\..\Libraries\drivers\src\crc.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\crc.o --omf_browse .\mks22\flash\crc.crf --depend .\mks22\flash\crc.d)
-I (..\..\..\..\Libraries\drivers\inc\crc.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\dma.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\dma.o --omf_browse .\mks22\flash\dma.crf --depend .\mks22\flash\dma.d)
-I (..\..\..\..\Libraries\drivers\inc\dma.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\flash.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\flash.o --omf_browse .\mks22\flash\flash.crf --depend .\mks22\flash\flash.d)
-I (..\..\..\..\Libraries\drivers\inc\flash.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\flexcan.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\flexcan.o --omf_browse .\mks22\flash\flexcan.crf --depend .\mks22\flash\flexcan.d)
-I (..\..\..\..\Libraries\drivers\inc\flexcan.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\gpio.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\flexio.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\flexio.o --omf_browse .\mks22\flash\flexio.crf --depend .\mks22\flash\flexio.d)
-I (..\..\..\..\Libraries\drivers\inc\flexio.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\gpio.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\gpio.o --omf_browse .\mks22\flash\gpio.crf --depend .\mks22\flash\gpio.d)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\gpio.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\i2c.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\i2c.o --omf_browse .\mks22\flash\i2c.crf --depend .\mks22\flash\i2c.d)
-I (..\..\..\..\Libraries\drivers\inc\i2c.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\gpio.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\lptmr.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\lptmr.o --omf_browse .\mks22\flash\lptmr.crf --depend .\mks22\flash\lptmr.d)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\lptmr.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\lpuart.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\lpuart.o --omf_browse .\mks22\flash\lpuart.crf --depend .\mks22\flash\lpuart.d)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\lpuart.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\mcg.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\mcg.o --omf_browse .\mks22\flash\mcg.crf --depend .\mks22\flash\mcg.d)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\drivers\inc\mcg.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\pit.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\pit.o --omf_browse .\mks22\flash\pit.crf --depend .\mks22\flash\pit.d)
-I (..\..\..\..\Libraries\drivers\inc\pit.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\rtc.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\rtc.o --omf_browse .\mks22\flash\rtc.crf --depend .\mks22\flash\rtc.d)
-I (..\..\..\..\Libraries\drivers\inc\rtc.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\spi.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\spi.o --omf_browse .\mks22\flash\spi.crf --depend .\mks22\flash\spi.d)
-I (..\..\..\..\Libraries\drivers\inc\spi.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\tpm.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\tpm.o --omf_browse .\mks22\flash\tpm.crf --depend .\mks22\flash\tpm.d)
-I (..\..\..\..\Libraries\drivers\inc\tpm.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\uart.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\uart.o --omf_browse .\mks22\flash\uart.crf --depend .\mks22\flash\uart.d)
-I (..\..\..\..\Libraries\drivers\inc\uart.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)
-F (..\..\..\..\Libraries\drivers\src\wdog.c)(0x583C4324)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\inc -I ..\..\..\..\Libraries\drivers\inc -I ..\src --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-rel_raven_ks22\CH-K-Lib\Project\RavenKS22¶ÉÑ»_»ù´¡Àý³Ì\wzt\mdk\RTE\_mks22fn25612-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_KSxx_DFP\1.1.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMKS22FN256xxx12 -DMKS22F25612-o .\mks22\flash\wdog.o --omf_browse .\mks22\flash\wdog.crf --depend .\mks22\flash\wdog.d)
-I (..\..\..\..\Libraries\drivers\inc\wdog.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\inc\common.h)(0x583C4324)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\assert.h)(0x57F606B6)
-I (..\..\..\..\Libraries\startup\inc\MKS22F25612.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmInstr.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cmFunc.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\core_cm4_simd.h)(0x583C4324)
-I (..\..\..\..\Libraries\startup\inc\system_MKS22F25612.h)(0x583C4324)

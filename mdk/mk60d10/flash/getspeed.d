@@ -1,0 +1,12 @@
+.\mk60d10\flash\getspeed.o: ..\src\getspeed.c
+.\mk60d10\flash\getspeed.o: ..\src\getspeed.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\drivers\K\inc\gpio.h
+.\mk60d10\flash\getspeed.o: D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin\..\include\stdint.h
+.\mk60d10\flash\getspeed.o: D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin\..\include\stdbool.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\drivers\K\inc\dma.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\startup\DeviceSupport\MK60D10.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\startup\CoreSupport\core_cm4.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\startup\CoreSupport\core_cmInstr.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\startup\CoreSupport\core_cmFunc.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\startup\CoreSupport\core_cm4_simd.h
+.\mk60d10\flash\getspeed.o: ..\..\..\..\Libraries\startup\DeviceSupport\system_MK60D10.h

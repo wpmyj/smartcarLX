@@ -1,0 +1,468 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.22.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: zet Microsoft, Microsoft, LIC=14HJJ-UNXH5-KBHER-K7PAR-QR679-PSXG0
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.22
+Toolchain Path:  D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.22
+Dialog DLL:      DCM.DLL V1.13.9.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.21.0.0
+ 
+<h2>Project:</h2>
+E:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\templete.uvprojx
+Project File Date:  01/22/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin'
+Rebuild target 'mk60d10'
+assembling startup_MK60D10.s...
+compiling system_MK60D10.c...
+compiling main.c...
+..\src\ccd.h(17): warning:  #1295-D: Deprecated declaration TSL1401_GetLine - give arg types
+  void TSL1401_GetLine();
+..\src\ccd.h(20): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\motor.h(8): warning:  #1295-D: Deprecated declaration motor_test - give arg types
+  void motor_test();
+..\src\motor.h(9): warning:  #1295-D: Deprecated declaration l_motor_PID_Test - give arg types
+  void 	l_motor_PID_Test();
+..\src\motor.h(10): warning:  #1295-D: Deprecated declaration r_motor_PID_Test - give arg types
+  void	r_motor_PID_Test();
+..\src\motor.h(11): warning:  #1295-D: Deprecated declaration motor_Init - give arg types
+  void motor_Init();
+..\src\motor.h(12): warning:  #1295-D: Deprecated declaration TSL1402_GetLine - give arg types
+  void TSL1402_GetLine();
+..\src\motor.h(13): warning:  #1-D: last line of file ends without a newline
+  void motor_Init1();
+..\src\motor.h(13): warning:  #1295-D: Deprecated declaration motor_Init1 - give arg types
+  void motor_Init1();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\steer.h(5): warning:  #1295-D: Deprecated declaration steer_Init - give arg types
+  void steer_Init();
+..\src\steer.h(6): warning:  #1295-D: Deprecated declaration steer_PID - give arg types
+  void steer_PID();
+..\src\steer.h(7): warning:  #1295-D: Deprecated declaration Control_test - give arg types
+  void Control_test();
+..\src\steer.h(9): warning:  #1295-D: Deprecated declaration delete_wan_speed - give arg types
+  
+ool delete_wan_speed();
+..\src\steer.h(10): warning:  #1295-D: Deprecated declaration Suddenly_Turn - give arg types
+  void Suddenly_Turn();
+..\src\steer.h(11): warning:  #1295-D: Deprecated declaration ramp_steer_pwm - give arg types
+  int  ramp_steer_pwm();
+..\src\steer.h(12): warning:  #1295-D: Deprecated declaration ramp_middle - give arg types
+  int ramp_middle();
+..\src\steer.h(14): warning:  #1295-D: Deprecated declaration steer_test - give arg types
+  void steer_test();
+..\src\steer.h(15): warning:  #1-D: last line of file ends without a newline
+  int get_CCDMiddle();
+..\src\steer.h(15): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\interupt.h(4): warning:  #1-D: last line of file ends without a newline
+  void Car_Interupt();
+..\src\interupt.h(4): warning:  #1295-D: Deprecated declaration Car_Interupt - give arg types
+  void Car_Interupt();
+..\src\oled.h(44): warning:  #1295-D: Deprecated declaration show_Road - give arg types
+  void show_Road();
+..\src\getspeed.h(6): warning:  #1295-D: Deprecated declaration encoder_Init - give arg types
+  void encoder_Init();
+..\src\getspeed.h(8): warning:  #1-D: last line of file ends without a newline
+  void get_Speed(void);
+..\src\main.c: 44 warnings, 0 errors
+compiling ccd.c...
+..\src\ccd.h(17): warning:  #1295-D: Deprecated declaration TSL1401_GetLine - give arg types
+  void TSL1401_GetLine();
+..\src\ccd.h(20): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\ccd.c(195): warning:  #177-D: variable "sum"  was declared but never referenced
+  	int i=0,sum=0,sumcount = 0,m_count[256] = {0};
+..\src\ccd.c(195): warning:  #177-D: variable "sumcount"  was declared but never referenced
+  	int i=0,sum=0,sumcount = 0,m_count[256] = {0};
+..\src\ccd.c(195): warning:  #177-D: variable "m_count"  was declared but never referenced
+  	int i=0,sum=0,sumcount = 0,m_count[256] = {0};
+..\src\ccd.c(302): warning:  #550-D: variable "average"  was set but never used
+  	  int sum=0,average=0; 
+..\src\ccd.c: 16 warnings, 0 errors
+compiling interupt.c...
+..\src\interupt.h(4): warning:  #1-D: last line of file ends without a newline
+  void Car_Interupt();
+..\src\interupt.h(4): warning:  #1295-D: Deprecated declaration Car_Interupt - give arg types
+  void Car_Interupt();
+..\src\ccd.h(17): warning:  #1295-D: Deprecated declaration TSL1401_GetLine - give arg types
+  void TSL1401_GetLine();
+..\src\ccd.h(20): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\steer.h(5): warning:  #1295-D: Deprecated declaration steer_Init - give arg types
+  void steer_Init();
+..\src\steer.h(6): warning:  #1295-D: Deprecated declaration steer_PID - give arg types
+  void steer_PID();
+..\src\steer.h(7): warning:  #1295-D: Deprecated declaration Control_test - give arg types
+  void Control_test();
+..\src\steer.h(9): warning:  #1295-D: Deprecated declaration delete_wan_speed - give arg types
+  
+ool delete_wan_speed();
+..\src\steer.h(10): warning:  #1295-D: Deprecated declaration Suddenly_Turn - give arg types
+  void Suddenly_Turn();
+..\src\steer.h(11): warning:  #1295-D: Deprecated declaration ramp_steer_pwm - give arg types
+  int  ramp_steer_pwm();
+..\src\steer.h(12): warning:  #1295-D: Deprecated declaration ramp_middle - give arg types
+  int ramp_middle();
+..\src\steer.h(14): warning:  #1295-D: Deprecated declaration steer_test - give arg types
+  void steer_test();
+..\src\steer.h(15): warning:  #1-D: last line of file ends without a newline
+  int get_CCDMiddle();
+..\src\steer.h(15): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\motor.h(8): warning:  #1295-D: Deprecated declaration motor_test - give arg types
+  void motor_test();
+..\src\motor.h(9): warning:  #1295-D: Deprecated declaration l_motor_PID_Test - give arg types
+  void 	l_motor_PID_Test();
+..\src\motor.h(10): warning:  #1295-D: Deprecated declaration r_motor_PID_Test - give arg types
+  void	r_motor_PID_Test();
+..\src\motor.h(11): warning:  #1295-D: Deprecated declaration motor_Init - give arg types
+  void motor_Init();
+..\src\motor.h(12): warning:  #1295-D: Deprecated declaration TSL1402_GetLine - give arg types
+  void TSL1402_GetLine();
+..\src\motor.h(13): warning:  #1-D: last line of file ends without a newline
+  void motor_Init1();
+..\src\motor.h(13): warning:  #1295-D: Deprecated declaration motor_Init1 - give arg types
+  void motor_Init1();
+..\src\buletooth.h(4): warning:  #1295-D: Deprecated declaration send_road_Info - give arg types
+  void send_road_Info();
+..\src\buletooth.h(5): warning:  #1-D: last line of file ends without a newline
+  void send_encoder_Value();
+..\src\buletooth.h(5): warning:  #1295-D: Deprecated declaration send_encoder_Value - give arg types
+  void send_encoder_Value();
+..\src\getspeed.h(6): warning:  #1295-D: Deprecated declaration encoder_Init - give arg types
+  void encoder_Init();
+..\src\getspeed.h(8): warning:  #1-D: last line of file ends without a newline
+  void get_Speed(void);
+..\src\interupt.c: 56 warnings, 0 errors
+compiling steer.c...
+..\src\ccd.h(17): warning:  #1295-D: Deprecated declaration TSL1401_GetLine - give arg types
+  void TSL1401_GetLine();
+..\src\ccd.h(20): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\steer.h(5): warning:  #1295-D: Deprecated declaration steer_Init - give arg types
+  void steer_Init();
+..\src\steer.h(6): warning:  #1295-D: Deprecated declaration steer_PID - give arg types
+  void steer_PID();
+..\src\steer.h(7): warning:  #1295-D: Deprecated declaration Control_test - give arg types
+  void Control_test();
+..\src\steer.h(9): warning:  #1295-D: Deprecated declaration delete_wan_speed - give arg types
+  
+ool delete_wan_speed();
+..\src\steer.h(10): warning:  #1295-D: Deprecated declaration Suddenly_Turn - give arg types
+  void Suddenly_Turn();
+..\src\steer.h(11): warning:  #1295-D: Deprecated declaration ramp_steer_pwm - give arg types
+  int  ramp_steer_pwm();
+..\src\steer.h(12): warning:  #1295-D: Deprecated declaration ramp_middle - give arg types
+  int ramp_middle();
+..\src\steer.h(14): warning:  #1295-D: Deprecated declaration steer_test - give arg types
+  void steer_test();
+..\src\steer.h(15): warning:  #1-D: last line of file ends without a newline
+  int get_CCDMiddle();
+..\src\steer.h(15): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\steer.c(77): warning:  #177-D: variable "last_steer_pwms"  was declared but never referenced
+  	int steer_pwms,last_steer_pwms;
+..\src\steer.c: 33 warnings, 0 errors
+compiling motor.c...
+..\src\ccd.h(17): warning:  #1295-D: Deprecated declaration TSL1401_GetLine - give arg types
+  void TSL1401_GetLine();
+..\src\ccd.h(20): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\motor.h(8): warning:  #1295-D: Deprecated declaration motor_test - give arg types
+  void motor_test();
+..\src\motor.h(9): warning:  #1295-D: Deprecated declaration l_motor_PID_Test - give arg types
+  void 	l_motor_PID_Test();
+..\src\motor.h(10): warning:  #1295-D: Deprecated declaration r_motor_PID_Test - give arg types
+  void	r_motor_PID_Test();
+..\src\motor.h(11): warning:  #1295-D: Deprecated declaration motor_Init - give arg types
+  void motor_Init();
+..\src\motor.h(12): warning:  #1295-D: Deprecated declaration TSL1402_GetLine - give arg types
+  void TSL1402_GetLine();
+..\src\motor.h(13): warning:  #1-D: last line of file ends without a newline
+  void motor_Init1();
+..\src\motor.h(13): warning:  #1295-D: Deprecated declaration motor_Init1 - give arg types
+  void motor_Init1();
+..\src\motor.c(149): warning:  #177-D: variable "target_Speed"  was declared but never referenced
+  	  int  target_Speed = 0;
+..\src\motor.c: 20 warnings, 0 errors
+compiling buletooth.c...
+..\src\buletooth.h(4): warning:  #1295-D: Deprecated declaration send_road_Info - give arg types
+  void send_road_Info();
+..\src\buletooth.h(5): warning:  #1-D: last line of file ends without a newline
+  void send_encoder_Value();
+..\src\buletooth.h(5): warning:  #1295-D: Deprecated declaration send_encoder_Value - give arg types
+  void send_encoder_Value();
+..\src\ccd.h(17): warning:  #1295-D: Deprecated declaration TSL1401_GetLine - give arg types
+  void TSL1401_GetLine();
+..\src\ccd.h(20): warning:  #1295-D: Deprecated declaration get_CCDMiddle - give arg types
+  int get_CCDMiddle();
+..\src\ccd.h(24): warning:  #1295-D: Deprecated declaration Adapt1_Black_Threah - give arg types
+  void Adapt1_Black_Threah();
+..\src\ccd.h(25): warning:  #1295-D: Deprecated declaration Adapt2_Black_Thread - give arg types
+  void Adapt2_Black_Thread();
+..\src\ccd.h(26): warning:  #1295-D: Deprecated declaration CCD1_init - give arg types
+  void CCD1_init();
+..\src\ccd.h(27): warning:  #1295-D: Deprecated declaration CCD2_init - give arg types
+  void CCD2_init();
+..\src\ccd.h(28): warning:  #1295-D: Deprecated declaration CCD3_init - give arg types
+  void CCD3_init();
+..\src\ccd.h(33): warning:  #1295-D: Deprecated declaration Adapted_Black_Thread - give arg types
+  void Adapted_Black_Thread();
+..\src\ccd.h(34): warning:  #1295-D: Deprecated declaration Adapted2_Black_Thread - give arg types
+  void Adapted2_Black_Thread();
+..\src\ccd.h(35): warning:  #1295-D: Deprecated declaration road_middle_width - give arg types
+  void road_middle_width();
+..\src\ccd.h(36): warning:  #1295-D: Deprecated declaration modify_CCD_Middle - give arg types
+  void modify_CCD_Middle();
+..\src\ccd.h(38): warning:  #1295-D: Deprecated declaration guassfilter - give arg types
+  void guassfilter();
+..\src\buletooth.c(21): warning:  #1-D: last line of file ends without a newline
+  }
+..\src\buletooth.c: 16 warnings, 0 errors
+compiling oled.c...
+..\src\oled.h(44): warning:  #1295-D: Deprecated declaration show_Road - give arg types
+  void show_Road();
+..\src\oled.c: 1 warning, 0 errors
+compiling getspeed.c...
+..\src\getspeed.h(6): warning:  #1295-D: Deprecated declaration encoder_Init - give arg types
+  void encoder_Init();
+..\src\getspeed.h(8): warning:  #1-D: last line of file ends without a newline
+  void get_Speed(void);
+..\src\getspeed.c: 2 warnings, 0 errors
+compiling gpio.c...
+compiling uart.c...
+compiling wdog.c...
+compiling pit.c...
+compiling cpuidy.c...
+compiling adc.c...
+compiling ftm.c...
+..\..\..\..\Libraries\drivers\K\src\ftm.c(56): warning:  #1215-D: #warning directive: "No FTM3 clock gate"
+      #warning "No FTM3 clock gate"
+..\..\..\..\Libraries\drivers\K\src\ftm.c: 1 warning, 0 errors
+compiling i2c.c...
+compiling spi.c...
+compiling lptmr.c...
+compiling dma.c...
+compiling flexbus.c...
+compiling rtc.c...
+compiling systick.c...
+compiling enet.c...
+compiling tsi.c...
+compiling common.c...
+compiling cmp.c...
+compiling sd.c...
+compiling can.c...
+compiling crc.c...
+compiling dac.c...
+compiling pdb.c...
+compiling vref.c...
+linking...
+Program Size: Code=22200 RO-data=1652 RW-data=204 ZI-data=7020  
+FromELF: creating hex file...
+After Build - User command #1: fromelf --bin -o "E:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\mk60d10\flash\templete.bin" "E:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\mk60d10\flash\templete.axf"
+".\mk60d10\flash\templete.axf" - 0 Error(s), 189 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10
+  D:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:20
+</pre>
+</body>
+</html>
