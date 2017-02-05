@@ -23,3 +23,4 @@
 .\mk60d10\flash\main.o: ..\src\interupt.h
 .\mk60d10\flash\main.o: ..\src\oled.h
 .\mk60d10\flash\main.o: ..\src\getspeed.h
+.\mk60d10\flash\main.o: ..\src\camera.h

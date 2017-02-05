@@ -10,7 +10,7 @@ I (..\..\..\..\Libraries\startup\DeviceSupport\system_MK60D10.h)(0x5820915B)
 F (..\..\..\..\Libraries\startup\DeviceSupport\MDK-ARM\startup_MK60D10.s)(0x5820915B)(--cpu Cortex-M4 -g --apcs=interwork -IE:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 522" --pd "MK60DN512xxx10 SETA 1"--list .\startup_mk60d10.lst --xref -o .\mk60d10\flash\startup_mk60d10.o --depend .\mk60d10\flash\startup_mk60d10.d)
 F (..\..\..\..\Libraries\startup\DeviceSupport\system_MK64F12.c)(0x5820915B)()
 F (..\..\..\..\Libraries\startup\DeviceSupport\MDK-ARM\startup_MK64F12.s)(0x5820915B)()
-F (..\src\main.c)(0x5885CAD5)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\CoreSupport -I ..\..\..\..\Libraries\startup\DeviceSupport -I ..\..\..\..\Libraries\drivers\K\inc -I ..\..\..\..\Libraries\utilities\inc -I ..\..\..\..\Libraries\devices\inc -I ..\src -I ..\..\..\..\Libraries\utilities\emWin\Include --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMK60DN512xxx10 -DMK60D10-o .\mk60d10\flash\main.o --omf_browse .\mk60d10\flash\main.crf --depend .\mk60d10\flash\main.d)
+F (..\src\main.c)(0x5886F4FD)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\CoreSupport -I ..\..\..\..\Libraries\startup\DeviceSupport -I ..\..\..\..\Libraries\drivers\K\inc -I ..\..\..\..\Libraries\utilities\inc -I ..\..\..\..\Libraries\devices\inc -I ..\src -I ..\..\..\..\Libraries\utilities\emWin\Include --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMK60DN512xxx10 -DMK60D10-o .\mk60d10\flash\main.o --omf_browse .\mk60d10\flash\main.crf --depend .\mk60d10\flash\main.d)
 I (..\..\..\..\Libraries\drivers\K\inc\gpio.h)(0x5820915B)
 I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
 I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
@@ -34,23 +34,6 @@ I (..\..\..\..\Libraries\drivers\K\inc\pit.h)(0x5820915B)
 I (..\src\interupt.h)(0x56D00CE6)
 I (..\src\oled.h)(0x56D00CE6)
 I (..\src\getspeed.h)(0x56D00CE6)
-F (..\src\ccd.c)(0x56D00CE6)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\CoreSupport -I ..\..\..\..\Libraries\startup\DeviceSupport -I ..\..\..\..\Libraries\drivers\K\inc -I ..\..\..\..\Libraries\utilities\inc -I ..\..\..\..\Libraries\devices\inc -I ..\src -I ..\..\..\..\Libraries\utilities\emWin\Include --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMK60DN512xxx10 -DMK60D10-o .\mk60d10\flash\ccd.o --omf_browse .\mk60d10\flash\ccd.crf --depend .\mk60d10\flash\ccd.d)
-I (..\src\ccd.h)(0x56D00CE6)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdint.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\K\inc\gpio.h)(0x5820915B)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\K\inc\adc.h)(0x5820915B)
-I (..\..\..\..\Libraries\drivers\K\inc\uart.h)(0x5820915B)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stdio.h)(0x57F606B8)
-I (..\..\..\..\Libraries\drivers\K\inc\common.h)(0x5820915B)
-I (D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\include\stddef.h)(0x57F606B8)
-I (..\..\..\..\Libraries\startup\DeviceSupport\MK60D10.h)(0x5820915B)
-I (..\..\..\..\Libraries\startup\CoreSupport\core_cm4.h)(0x5820915B)
-I (..\..\..\..\Libraries\startup\CoreSupport\core_cmInstr.h)(0x5820915B)
-I (..\..\..\..\Libraries\startup\CoreSupport\core_cmFunc.h)(0x5820915B)
-I (..\..\..\..\Libraries\startup\CoreSupport\core_cm4_simd.h)(0x5820915B)
-I (..\..\..\..\Libraries\startup\DeviceSupport\system_MK60D10.h)(0x5820915B)
-I (..\..\..\..\Libraries\drivers\K\inc\ftm.h)(0x5820915B)
 F (..\src\interupt.c)(0x57754C98)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\CoreSupport -I ..\..\..\..\Libraries\startup\DeviceSupport -I ..\..\..\..\Libraries\drivers\K\inc -I ..\..\..\..\Libraries\utilities\inc -I ..\..\..\..\Libraries\devices\inc -I ..\src -I ..\..\..\..\Libraries\utilities\emWin\Include --c99-IE:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include-D__UVISION_VERSION="522" -DMK60DN512xxx10 -DMK60D10-o .\mk60d10\flash\interupt.o --omf_browse .\mk60d10\flash\interupt.crf --depend .\mk60d10\flash\interupt.d)
 I (..\src\interupt.h)(0x56D00CE6)
 I (..\..\..\..\Libraries\drivers\K\inc\gpio.h)(0x5820915B)

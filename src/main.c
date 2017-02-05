@@ -8,6 +8,7 @@
 #include "oled.h"
 #include "uart.h"
 #include "getspeed.h"
+#include "camera.h"
 uint8_t ADC_Value[128];
 
 int CCD_Left;
@@ -153,10 +154,12 @@ void zhangRuiQing_MotorAndSteer(){
 
 
 
+
 int main(void)
 { 
 	motor();
 	steer_init();
 	steer_change();
+	OLED_Init();
 }
 

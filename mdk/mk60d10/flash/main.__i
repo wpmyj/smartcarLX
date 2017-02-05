@@ -1,0 +1,6 @@
+-c --cpu Cortex-M4 -g -O0 --apcs=interwork -I ..\..\..\..\Libraries\startup\CoreSupport -I ..\..\..\..\Libraries\startup\DeviceSupport -I ..\..\..\..\Libraries\drivers\K\inc -I ..\..\..\..\Libraries\utilities\inc -I ..\..\..\..\Libraries\devices\inc -I ..\src -I ..\..\..\..\Libraries\utilities\emWin\Include --c99
+-IE:\ZhiNengChe\yandld-CH-K-Lib-master\CH-K-Lib\Project\超核K60-K64开发板-应用例程\我的小车wzt\MDK\RTE\_mk60d10
+-ID:\xuexi2\SmartCar\MDKforARM\ARM\PACK\Keil\Kinetis_K60_DFP\1.4.0\Device\Include
+-ID:\xuexi2\SmartCar\MDKforARM\ARM\CMSIS\Include
+-D__UVISION_VERSION="522" -DMK60DN512xxx10 -DMK60D10
+-o .\mk60d10\flash\main.o --omf_browse .\mk60d10\flash\main.crf --depend .\mk60d10\flash\main.d "..\src\main.c"

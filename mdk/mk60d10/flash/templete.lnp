@@ -2,7 +2,6 @@
 ".\mk60d10\flash\system_mk60d10.o"
 ".\mk60d10\flash\startup_mk60d10.o"
 ".\mk60d10\flash\main.o"
-".\mk60d10\flash\ccd.o"
 ".\mk60d10\flash\interupt.o"
 ".\mk60d10\flash\steer.o"
 ".\mk60d10\flash\motor.o"

@@ -483,11 +483,6 @@
               <FilePath>..\src\main.c</FilePath>
             </File>
             <File>
-              <FileName>ccd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\ccd.c</FilePath>
-            </File>
-            <File>
               <FileName>interupt.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\interupt.c</FilePath>
@@ -516,6 +511,11 @@
               <FileName>getspeed.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\getspeed.c</FilePath>
+            </File>
+            <File>
+              <FileName>camera.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\camera.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1120,11 +1120,6 @@
               <FilePath>..\src\main.c</FilePath>
             </File>
             <File>
-              <FileName>ccd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\src\ccd.c</FilePath>
-            </File>
-            <File>
               <FileName>interupt.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\interupt.c</FilePath>
@@ -1153,6 +1148,11 @@
               <FileName>getspeed.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\src\getspeed.c</FilePath>
+            </File>
+            <File>
+              <FileName>camera.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\camera.c</FilePath>
             </File>
           </Files>
         </Group>
