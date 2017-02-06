@@ -29,7 +29,7 @@
 #include  "VCAN_MMA7455.h"      //三轴加速度MMA7455
 #include  "VCAN_NRF24L0.h"      //无线模块NRF24L01+
 #include  "VCAN_RTC_count.h"    //RTC 时间转换
-#include  "VCAN_camera.h"       //摄像头总头文件
+#include  "Liuzw_camera.h"       //摄像头总头文件
 #include  "VCAN_LCD.h"          //液晶总头文件
 #include  "ff.h"                //FatFs
 #include  "VCAN_TSL1401.h"      //线性CCD
