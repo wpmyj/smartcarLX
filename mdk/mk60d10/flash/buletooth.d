@@ -1,9 +1,0 @@
-.\mk60d10\flash\buletooth.o: ..\src\buletooth.c
-.\mk60d10\flash\buletooth.o: ..\src\buletooth.h
-.\mk60d10\flash\buletooth.o: ..\..\..\..\Libraries\drivers\K\inc\gpio.h
-.\mk60d10\flash\buletooth.o: D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin\..\include\stdint.h
-.\mk60d10\flash\buletooth.o: D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin\..\include\stdbool.h
-.\mk60d10\flash\buletooth.o: ..\..\..\..\Libraries\drivers\K\inc\uart.h
-.\mk60d10\flash\buletooth.o: D:\xuexi2\SmartCar\MDKforARM\ARM\ARMCC\Bin\..\include\stdio.h
-.\mk60d10\flash\buletooth.o: ..\src\ccd.h
-.\mk60d10\flash\buletooth.o: ..\..\..\..\Libraries\drivers\K\inc\adc.h

@@ -1,7 +1,0 @@
-#include "gpio.h"
-#include "common.h"
-#include "uart.h"
-#include "dma.h"
-#include "ftm.h"
-#include "dma.h"
-#include "pit.h"
