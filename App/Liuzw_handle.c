@@ -776,7 +776,7 @@ void cal_error(void)
  *  @brief      发送到上位机
  *  @author     刘忠威
  */
-void vcan_sendimg(void *imgaddr, uint32_t imgsize)
+/*void vcan_sendimg(void *imgaddr, uint32_t imgsize)
 {
 		#define CMD_IMG     1
     uint8_t cmdf[2] = {CMD_IMG, ~CMD_IMG};    //山外上位机 使用的命令
@@ -791,7 +791,7 @@ void vcan_sendimg(void *imgaddr, uint32_t imgsize)
 		for(int i= 0;i<60;i++)
 		   	uart_putchar(UART_PORT,Road_Center[i]);
     //uart_putbuff(UART_PORT, cmdr, sizeof(cmdr));    //先发送命令
-}
+}*/
 /*
  *  @brief      发送数据到上位机
  *  @author     刘忠威

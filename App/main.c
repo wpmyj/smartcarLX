@@ -16,9 +16,17 @@
 
 #include "common.h"
 #include "include.h"
+#include "MK60_it.h"
+#include "Liuzw_oled.h"
+#include "Liuzw_camera.h"
+#include "Liuzw_handle.h"
+#include "Liuzw_control.h"
+//#include "Liuzw_menu.h"
+//#include "Liuzw_buzzer.h"
 
-uint8 imgbuff[CAMERA_SIZE];                             //定义存储接收图像的数组
-uint8 img[CAMERA_W*CAMERA_H];
+
+//uint8 imgbuff[CAMERA_SIZE];                             //定义存储接收图像的数组
+//uint8 img[CAMERA_W*CAMERA_H];
 
 //函数声明
 void PORTA_IRQHandler();
@@ -33,19 +41,16 @@ void DMA0_IRQHandler();
  */
 void  main(void)
 {
+  /*zet
     Site_t site     = {0, 0};                           //显示图像左上角位置
     Size_t imgsize  = {CAMERA_W, CAMERA_H};             //图像大小
     Size_t size;                   //显示区域图像大小
-
-    LCD_init();
-    LCD_str            (site,"Cam init ing",FCOLOUR,BCOLOUR);
-
     size.H = LCD_H;
     size.W = LCD_W;
-
+*/
     camera_init(imgbuff);
 
-    LCD_str            (site,"Cam init OK!",FCOLOUR,BCOLOUR);
+    //LCD_str            (site,"Cam init OK!",FCOLOUR,BCOLOUR);
     //配置中断服务函数
     set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
     set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
@@ -55,11 +60,12 @@ void  main(void)
         camera_get_img();                                   //摄像头获取图像
 
         //黑白摄像头
-        LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
+        //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
+        oled_show_picture();
 
-
+        /*发送图片到上位机
         vcan_sendimg(imgbuff,CAMERA_SIZE);
-
+        */
     }
 }
 
@@ -68,7 +74,7 @@ void  main(void)
  *  @brief      PORTA中断服务函数
  *  @since      v5.0
  */
-void PORTA_IRQHandler()
+/*void PORTA_IRQHandler()
 {
     uint8  n;    //引脚号
     uint32 flag;
@@ -91,15 +97,15 @@ void PORTA_IRQHandler()
 #endif
 
 
-}
+}*/
 
 /*!
  *  @brief      DMA0中断服务函数
  *  @since      v5.0
  */
-void DMA0_IRQHandler()
+/*void DMA0_IRQHandler()
 {
     camera_dma();
-}
+}*/
 
 

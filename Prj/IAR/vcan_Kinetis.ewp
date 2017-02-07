@@ -5742,6 +5742,18 @@
       <name>$PROJ_DIR$\..\..\App\Liuzw_camera.h</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\..\App\Liuzw_control.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\Liuzw_control.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\Liuzw_handle.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\Liuzw_handle.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\App\Liuzw_led.c</name>
     </file>
     <file>
@@ -5752,6 +5764,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\App\Liuzw_oled.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\PC_link.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\PC_link.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_ASCII.c</name>

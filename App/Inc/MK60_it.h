@@ -27,9 +27,10 @@
  */
 
 
-
-
-
-
+extern void PORTA_IRQHandler();//摄像头中断服务函数
+extern void DMA0_IRQHandler();//摄像头中断服务函数
+extern void PIT0_IRQHandler();//pit0中断服务函数
+extern void PIT1_IRQHandler();
+extern void UART0_IRQHandler();//串口0中断服务函数
 
 #endif  //__MK60_IT_H__
