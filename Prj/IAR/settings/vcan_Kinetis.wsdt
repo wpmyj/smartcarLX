@@ -3,7 +3,7 @@
 <Workspace>
   <ConfigDictionary>
     
-  <CurrentConfigs><Project>vcan_Kinetis/FN15_Debug</Project></CurrentConfigs></ConfigDictionary>
+  <CurrentConfigs><Project>vcan_Kinetis/DZ10_Release</Project></CurrentConfigs></ConfigDictionary>
   <Desktop>
     <Static>
       <Workspace>
@@ -20,7 +20,7 @@
         
         
       <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>663</ColumnWidth1><ColumnWidth2>177</ColumnWidth2><ColumnWidth3>44</ColumnWidth3></Build>
-    <Find-All-Declarations><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-All-Declarations><Find-All-References><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-All-References><Select-Ambiguous-Definitions><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Select-Ambiguous-Definitions></Static>
+    <Find-All-Declarations><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-All-Declarations><Find-All-References><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-All-References><Select-Ambiguous-Definitions><ColumnWidth0>496</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Select-Ambiguous-Definitions><Debug-Log><ColumnWidth0>24</ColumnWidth0><ColumnWidth1>1377</ColumnWidth1></Debug-Log><TerminalIO/></Static>
     <Windows>
       
       
@@ -32,11 +32,11 @@
             <Factory>Workspace</Factory>
             <Session>
               
-            <NodeDict><ExpandedNode>vcan_Kinetis</ExpandedNode><ExpandedNode>vcan_Kinetis/App</ExpandedNode><ExpandedNode>vcan_Kinetis/Board</ExpandedNode></NodeDict></Session>
+            <NodeDict><ExpandedNode>vcan_Kinetis</ExpandedNode><ExpandedNode>vcan_Kinetis/App</ExpandedNode><ExpandedNode>vcan_Kinetis/Board</ExpandedNode><ExpandedNode>vcan_Kinetis/Chip</ExpandedNode></NodeDict></Session>
           </Tab>
         </Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd1><Wnd4>
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-10469-24908</Identity>
@@ -44,22 +44,22 @@
             <Factory>Build</Factory>
             <Session/>
           </Tab>
-        <Tab><Identity>TabID-17088-29793</Identity><TabName>Declarations</TabName><Factory>Find-All-Declarations</Factory><Session/></Tab><Tab><Identity>TabID-7678-29970</Identity><TabName>References</TabName><Factory>Find-All-References</Factory><Session/></Tab><Tab><Identity>TabID-26331-30234</Identity><TabName>Ambiguous Definitions</TabName><Factory>Select-Ambiguous-Definitions</Factory><Session/></Tab></Tabs>
+        <Tab><Identity>TabID-17088-29793</Identity><TabName>Declarations</TabName><Factory>Find-All-Declarations</Factory><Session/></Tab><Tab><Identity>TabID-7678-29970</Identity><TabName>References</TabName><Factory>Find-All-References</Factory><Session/></Tab><Tab><Identity>TabID-26331-30234</Identity><TabName>Ambiguous Definitions</TabName><Factory>Select-Ambiguous-Definitions</Factory><Session/></Tab><Tab><Identity>TabID-31736-30771</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
         
-      <SelectedTab>0</SelectedTab></Wnd4></Windows>
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
     <Editor>
       
       
       
       
-    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_control.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>71</YPos2><SelStart2>2372</SelStart2><SelEnd2>2387</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_handle.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>150</SelStart2><SelEnd2>150</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_camera.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>18</YPos2><SelStart2>680</SelStart2><SelEnd2>680</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_oled.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>63</YPos2><SelStart2>5330</SelStart2><SelEnd2>5347</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\PC_link.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>266</SelStart2><SelEnd2>266</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>41</YPos2><SelStart2>961</SelStart2><SelEnd2>961</SelEnd2></Tab><ActiveTab>5</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_oled.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>18</YPos2><SelStart2>860</SelStart2><SelEnd2>860</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_handle.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>771</YPos2><SelStart2>19538</SelStart2><SelEnd2>19538</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_camera.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>189</SelStart2><SelEnd2>189</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>9</YPos2><SelStart2>481</SelStart2><SelEnd2>481</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_control.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>91</YPos2><SelStart2>3345</SelStart2><SelEnd2>3345</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_led.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>34</YPos2><SelStart2>887</SelStart2><SelEnd2>894</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_control.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>20</YPos2><SelStart2>1650</SelStart2><SelEnd2>1650</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\Liuzw_led.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>604</SelStart2><SelEnd2>604</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\MK60_conf.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>24</YPos2><SelStart2>933</SelStart2><SelEnd2>933</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\App\MK60_it.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>35</YPos2><SelStart2>1417</SelStart2><SelEnd2>1417</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Chip\src\MK60_ftm.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>42</YPos2><SelStart2>14026</SelStart2><SelEnd2>14026</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Chip\inc\MK60_FTM.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>57</YPos2><SelStart2>1175</SelStart2><SelEnd2>1175</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Chip\src\MK60_gpio.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>21</YPos2><SelStart2>1030</SelStart2><SelEnd2>1030</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\Board\inc\VCAN_LED.H</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>0</YPos2><SelStart2>524</SelStart2><SelEnd2>524</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
     <Positions>
       
       
       
       
       
-    <Top><Row0><Sizes><Toolbar-00ED5928><key>iaridepm.enu1</key></Toolbar-00ED5928></Sizes></Row0></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>522</Bottom><Right>329</Right><x>-2</x><y>-2</y><xscreen>153</xscreen><yscreen>96</yscreen><sizeHorzCX>106250</sizeHorzCX><sizeHorzCY>117359</sizeHorzCY><sizeVertCX>229861</sizeVertCX><sizeVertCY>640587</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>251</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>253</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>309291</sizeHorzCY><sizeVertCX>106250</sizeVertCX><sizeVertCY>117359</sizeVertCY></Rect></Wnd4></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+    <Top><Row0><Sizes><Toolbar-00D159A8><key>iaridepm.enu1</key></Toolbar-00D159A8></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>617</Bottom><Right>329</Right><x>-2</x><y>-2</y><xscreen>153</xscreen><yscreen>96</yscreen><sizeHorzCX>106250</sizeHorzCX><sizeHorzCY>117359</sizeHorzCY><sizeVertCX>229861</sizeVertCX><sizeVertCY>756724</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>156</Bottom><Right>1442</Right><x>-2</x><y>-2</y><xscreen>1444</xscreen><yscreen>158</yscreen><sizeHorzCX>1002778</sizeHorzCX><sizeHorzCY>193154</sizeHorzCY><sizeVertCX>106250</sizeVertCX><sizeVertCY>117359</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
   </Desktop>
 </Workspace>
 

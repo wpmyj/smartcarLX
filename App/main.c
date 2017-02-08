@@ -1,19 +1,3 @@
-/*!
- *     COPYRIGHT NOTICE
- *     Copyright (c) 2013,山外科技
- *     All rights reserved.
- *     技术讨论：山外论坛 http://www.vcan123.com
- *
- *     除注明出处外，以下所有内容版权均属山外科技所有，未经允许，不得用于商业用途，
- *     修改内容时必须保留山外科技的版权声明。
- *
- * @file       main.c
- * @brief      山外K60 平台主程序
- * @author     山外科技
- * @version    v5.0
- * @date       2013-08-28
- */
-
 #include "common.h"
 #include "include.h"
 #include "MK60_it.h"
@@ -24,88 +8,58 @@
 //#include "Liuzw_menu.h"
 //#include "Liuzw_buzzer.h"
 
+void zet_motor(void);
+void steer(void);
 
-//uint8 imgbuff[CAMERA_SIZE];                             //定义存储接收图像的数组
-//uint8 img[CAMERA_W*CAMERA_H];
-
-//函数声明
-void PORTA_IRQHandler();
-void DMA0_IRQHandler();
-
-
-
-/*!
- *  @brief      main函数
- *  @since      v5.3
- *  @note       山外摄像头 LCD 测试实验
- */
 void  main(void)
-{
-  /*zet
-    Site_t site     = {0, 0};                           //显示图像左上角位置
-    Size_t imgsize  = {CAMERA_W, CAMERA_H};             //图像大小
-    Size_t size;                   //显示区域图像大小
-    size.H = LCD_H;
-    size.W = LCD_W;
-*/
-    camera_init(imgbuff);
-
-    //LCD_str            (site,"Cam init OK!",FCOLOUR,BCOLOUR);
-    //配置中断服务函数
-    set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
-    set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
-
-    while(1)
+{ 
+    led_init(LED0);
+    zet_motor();
+    steer();
+    while (1)
     {
-        camera_get_img();                                   //摄像头获取图像
-
-        //黑白摄像头
-        //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
-        oled_show_picture();
-
-        /*发送图片到上位机
-        vcan_sendimg(imgbuff,CAMERA_SIZE);
-        */
+      led_set(LED0,LED_ON);
+      DELAY_MS(1000);
+      led_set(LED0,LED_OFF);
+      DELAY_MS(1000);
     }
+    
+    /*init_all(); 
+	 
+		while(1)
+		{
+			
+        camera_get_img();//采集赛道
+        img_extract((uint8*)img, imgbuff,CAMERA_SIZE);  //挤压图像
+        search_line();
+        cal_valid_row();
+        road_type();
+        cal_middle();
+        cal_error();
+        //send_data();
+        vcan_sendimg(imgbuff, CAMERA_SIZE);//发送到上位机
+      	oled_show_picture();//oled显示赛道
+  
+		}*/
 }
 
+void zet_motor(void){
+    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_A,MOTOR_HZ_A,0);//驱动FTM初始化
+    gpio_init(MOTOR_DIR1_PIN,GPO,0);//驱动正向使能初始化
+    gpio_init(MOTOR_DIR2_PIN,GPO,0);//驱动反向使能初始化
+    gpio_set(MOTOR_DIR1_PIN,1);//驱动正向使能初始化
+    gpio_set(MOTOR_DIR2_PIN,0);//驱动正向使能初始化
+    ftm_pwm_duty(MOTOR_FTM_A,MOTOR_CH_A,76);
+    
+    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_B,MOTOR_HZ_B,0);//驱动FTM初始化
+    gpio_init(MOTOR_DIR3_PIN,GPO,0);//驱动正向使能初始化
+    gpio_init(MOTOR_DIR4_PIN,GPO,0);//驱动反向使能初始化
+    gpio_set(MOTOR_DIR3_PIN,0);//驱动正向使能初始化
+    gpio_set(MOTOR_DIR4_PIN,1);//驱动正向使能初始化
+    ftm_pwm_duty(MOTOR_FTM_B,MOTOR_CH_B,76);
+}
 
-/*!
- *  @brief      PORTA中断服务函数
- *  @since      v5.0
- */
-/*void PORTA_IRQHandler()
-{
-    uint8  n;    //引脚号
-    uint32 flag;
-
-    while(!PORTA_ISFR);
-    flag = PORTA_ISFR;
-    PORTA_ISFR  = ~0;                                   //清中断标志位
-
-    n = 29;                                             //场中断
-    if(flag & (1 << n))                                 //PTA29触发中断
-    {
-        camera_vsync();
-    }
-#if ( CAMERA_USE_HREF == 1 )                            //使用行中断
-    n = 28;
-    if(flag & (1 << n))                                 //PTA28触发中断
-    {
-        camera_href();
-    }
-#endif
-
-
-}*/
-
-/*!
- *  @brief      DMA0中断服务函数
- *  @since      v5.0
- */
-/*void DMA0_IRQHandler()
-{
-    camera_dma();
-}*/
-
-
+void steer(void){
+  ftm_pwm_init(SERVO_FTM,SERVO_CH,SERVO_HZ,SERVO_MIDDLE);//舵机FTM初始化
+  ftm_pwm_duty(SERVO_FTM,SERVO_CH,8650);
+}

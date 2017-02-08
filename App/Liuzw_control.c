@@ -45,7 +45,7 @@ void init_all(void)
 
     /*Hardware init*/
     ftm_pwm_init(SERVO_FTM,SERVO_CH,SERVO_HZ,SERVO_MIDDLE);//舵机FTM初始化
-    ftm_pwm_init(MOTOR_FTM,MOTOR_CH,MOTOR_HZ,0);//驱动FTM初始化
+    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_A,MOTOR_HZ_A,0);//驱动FTM初始化
     gpio_init(MOTOR_DIR1_PIN,GPO,0);//驱动正向使能初始化
     gpio_init(MOTOR_DIR2_PIN,GPO,0);//驱动反向使能初始化
 	
@@ -120,5 +120,5 @@ void motor_PID(void)
 	
 	gpio_set(MOTOR_DIR1_PIN,1);//驱动正向使能初始化
 	gpio_set(MOTOR_DIR2_PIN,0);//驱动正向使能初始化
-	ftm_pwm_duty(MOTOR_FTM,MOTOR_CH,16);
+	ftm_pwm_duty(MOTOR_FTM_A,MOTOR_CH_A,16);
 }

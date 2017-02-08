@@ -63,10 +63,10 @@ void PIT0_IRQHandler()
 	motor_PID();
 	//oled_show_num(81,1,Ave_Err,1,1);
 	
-	if(Second_Flag == true)
-		led_set(LED1 , LED_ON);
-	else
-		led_set(LED1 , LED_OFF);
+	//if(Second_Flag == true)
+		//led_set(LED1 , LED_ON);
+	//else
+		//led_set(LED1 , LED_OFF);
 	PIT_Flag_Clear(PIT0);//清除中断标志位，等待下一次中断进入  
 		
 }

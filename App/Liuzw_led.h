@@ -22,7 +22,6 @@
 typedef enum
 {
   LED0,
-  LED1,
   LED_MAX,
 }LED_e;
 
