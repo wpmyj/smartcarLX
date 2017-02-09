@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>773748613</fileChecksum>
+  <fileChecksum>1401028585</fileChecksum>
   <configuration>
     <name>DZ10_Debug</name>
     <outputs>
@@ -1492,6 +1492,10 @@
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
   </configuration>
   <configuration>
     <name>DZ10_Release</name>
@@ -1778,6 +1782,10 @@
       <file>$PROJ_DIR$\DZ10_Release\Obj\ff.pbi</file>
       <file>$PROJ_DIR$\DZ10_Release\Obj\USB.pbi</file>
       <file>$PROJ_DIR$\DZ10_Release\Exe\vcan_Kinetis.out</file>
+      <file>$PROJ_DIR$\DZ10_Release\Obj\zet_oled.o</file>
+      <file>$PROJ_DIR$\DZ10_Release\Obj\zet_oled.pbi</file>
+      <file>$PROJ_DIR$\..\..\App\zet_oled.c</file>
+      <file>$PROJ_DIR$\..\..\App\zet_oled.h</file>
     </outputs>
     <file>
       <name>$PROJ_DIR$\..\..\App\Liuzw_handle.c</name>
@@ -1849,11 +1857,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 116 125 119 121 0</file>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285 116 121 119 0</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 116 125 119 121 0</file>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285 116 121 119 0</file>
         </tool>
       </inputs>
     </file>
@@ -1895,11 +1903,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 119 14 50 125 121</file>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285 119 14 50 125 121</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 119 14 50 125 121</file>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285 119 14 50 125 121</file>
         </tool>
       </inputs>
     </file>
@@ -1918,11 +1926,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 0 121 119 116 125</file>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285 0 121 119 116 125</file>
         </tool>
         <tool>
           <name>ICCARM</name>
-          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 0 121 119 116 125</file>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285 0 121 119 116 125</file>
         </tool>
       </inputs>
     </file>
@@ -1955,10 +1963,6 @@
         <tool>
           <name>BICOMP</name>
           <file> 196</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 104</file>
         </tool>
       </outputs>
       <inputs>
@@ -3155,7 +3159,30 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 87 229 217 105 100 98 99 104 89 239 248 249 91 240 241 232 233 246 247 242 243 88 244 245 236 237 230 231 252 253 234 235 228 102 215 251 218 216 106 101 107 108 103 97 90 96 95 92 94 93 184 187 183 111 185 206 205 238 226 227 250 19 16 84 17</file>
+          <file> 87 229 217 105 100 98 99 89 239 248 249 91 240 241 232 233 246 247 242 243 88 244 245 236 237 230 231 252 253 234 235 228 102 215 251 218 216 106 101 107 108 103 97 90 96 95 92 94 93 184 187 183 111 185 206 205 238 226 227 250 282 19 16 84 17</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\zet_oled.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 283</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 282</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 150 56 8 5 63 26 22 61 40 45 42 23 74 65 28 181 32 66 62 44 69 49 6 20 68 39 114 27 182 51 117 60 25 64 75 73 30 38 48 3 29 67 70 72 41 180 46 7 123 285</file>
         </tool>
       </inputs>
     </file>
@@ -4882,6 +4909,10 @@
         </tool>
       </inputs>
     </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
   </configuration>
   <configuration>
     <name>FN15_Release</name>

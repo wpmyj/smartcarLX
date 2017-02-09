@@ -1,21 +1,71 @@
 #include "common.h"
 #include "include.h"
 #include "MK60_it.h"
-#include "Liuzw_oled.h"
-#include "Liuzw_camera.h"
+#include "zet_oled.h"
+//#include "Liuzw_camera.h"
 #include "Liuzw_handle.h"
 #include "Liuzw_control.h"
 //#include "Liuzw_menu.h"
 //#include "Liuzw_buzzer.h"
 
+char Para_Name[7][12]={"PID_ANGLE_P\0","PID_ANGLE_D\0","PID_SPEED_P\0",
+"PID_SPEED_I\0","PID_SPEED_D\0","PID_DIREC_P\0","PID_DIREC_D\0"};
+
+//float PID_ANGLE_P,PID_ANGLE_D,PID_SPEED_P,PID_SPEED_I,PID_SPEED_D,PID_TURN_P,PID_TURN_D;
+
+float Control_Para[7];
+
+
+float Voltage=7.26;
+
+uint8 Oled_Show=1,Para_Index=0,Para_Checked=0,Para_Index_Limit=7,Step_Index=3;
+
+float Step[8]={0.0001,0.001,0.01,0.1,1.0,10.0,100.0,1000.0};   //默认调节步长为0.01
+
+
+void OLED_Draw_UI()
+{
+     uint8 i;
+     OLED_P6x8Str(0,0,"Voltage=");                          //显示电池电压
+     OLED_PrintValueF(48, 0,Voltage,2);                     
+     OLED_PrintValueF(72, 0,Step[Step_Index],5);            //显示调节步进值
+     
+    for(i=0;i<7;i++)
+    {
+     if(i==Para_Index&&Para_Checked==false)
+      {
+       reverse=1;
+       OLED_P6x8Str(0,i+1,Para_Name[i]);   //将参量名反转显示
+       reverse=0;
+      }
+      else OLED_P6x8Str(0,i+1,Para_Name[i]);
+
+    
+     OLED_P6x8Char('=');
+    
+      if(i==Para_Index&&Para_Checked)
+      {
+        reverse=1;
+        OLED_PrintValueF(72, i+1,Control_Para[i],5);
+        reverse=0;
+      }
+      else  OLED_PrintValueF(72, i+1,Control_Para[i],5);
+      
+    }
+     
+}
+
+
 void zet_motor(void);
 void steer(void);
+void zet_oled();
 
 void  main(void)
 { 
     led_init(LED0);
     zet_motor();
     steer();
+    zet_oled();
     while (1)
     {
       led_set(LED0,LED_ON);
@@ -62,4 +112,15 @@ void zet_motor(void){
 void steer(void){
   ftm_pwm_init(SERVO_FTM,SERVO_CH,SERVO_HZ,SERVO_MIDDLE);//舵机FTM初始化
   ftm_pwm_duty(SERVO_FTM,SERVO_CH,8650);
+}
+
+void zet_oled(){
+  OLED_Init();
+  OLED_Draw_Logo();
+  DELAY_MS(2000);
+  OLED_CLS();
+  while(1)
+    {
+      if(Oled_Show)OLED_Draw_UI();
+    }
 }

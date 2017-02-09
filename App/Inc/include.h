@@ -22,6 +22,7 @@
 #include  "MK60_FLASH.h"    //FLASH
 
 #include  "Liuzw_led.H"          //LED
+#include  "zet_oled.h"
 //#include  "Liuzw_key.H"          //KEY
 
 #endif  //__INCLUDE_H__

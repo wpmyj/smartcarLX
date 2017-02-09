@@ -1,4 +1,4 @@
-"E:\ZhiNengChe\山外资料\山外K60参考代码V5.3（支持FX、FN和DNZ）\书外的参考例程\zet_k60_SW\App\Liuzw_oled.c"
+"E:\ZhiNengChe\山外资料\山外K60参考代码V5.3（支持FX、FN和DNZ）\书外的参考例程\zet_k60_SW\App\zet_oled.c"
 -std=c99
 -ferror-limit=100
 -I
@@ -238,7 +238,7 @@ E:\ZhiNengChe\山外资料\山外K60参考代码V5.3（支持FX、FN和DNZ）\书外的参考例程\zet
 -D__IAR_COMPILERBASE__=593924
 -D__SIGNED_CHARS__=1
 -D__DATE__="Feb  9 2017"
--D__TIME__="14:18:45"
+-D__TIME__="15:04:51"
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
 -D__STDC_HOSTED__=1

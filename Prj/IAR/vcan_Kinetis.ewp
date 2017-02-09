@@ -4846,7 +4846,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>6.30.1.53141</state>
+          <state>7.20.2.7418</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -5362,7 +5362,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state>vcan_Kinetis.hex</state>
+          <state>vcan_Kinetis.srec</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -5760,12 +5760,6 @@
       <name>$PROJ_DIR$\..\..\App\Liuzw_led.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_oled.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_oled.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\App\PC_link.c</name>
     </file>
     <file>
@@ -5836,6 +5830,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_UI_VAR.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\zet_oled.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\zet_oled.h</name>
     </file>
   </group>
   <group>
