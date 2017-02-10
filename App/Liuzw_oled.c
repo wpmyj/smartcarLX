@@ -32,7 +32,7 @@ static void oled_wr_byte(uint8 dat,uint8 cmd,uint8 mode)
     OLED_DC_Set();
   else 
     OLED_DC_Clr();		  
-  OLED_CS_Clr();
+  //OLED_CS_Clr();
   if(mode==0)
     dat=~dat;
   for(i=0;i<8;i++)
@@ -45,7 +45,7 @@ static void oled_wr_byte(uint8 dat,uint8 cmd,uint8 mode)
     OLED_SCLK_Set();
     dat<<=1;   
   }				 		  
-  OLED_CS_Set();
+  //OLED_CS_Set();
   OLED_DC_Set();   	  
 } 
 //选择操作坐标
@@ -307,7 +307,7 @@ void oled_init(void)
   gpio_init(OLED_SDIN_Pin, GPO, 1);  //初始化其为gpio模式
   gpio_init(OLED_RST_Pin, GPO, 1);   //初始化其为gpio模式
   gpio_init(OLED_DC_Pin, GPO, 1);    //初始化其为gpio模式
-  gpio_init(OLED_CS_Pin, GPO, 1);    //初始化其为gpio模式
+  //gpio_init(OLED_CS_Pin, GPO, 1);    //初始化其为gpio模式
   
   OLED_RST_Set();
   DELAY_MS(100);

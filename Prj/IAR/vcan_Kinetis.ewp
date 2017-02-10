@@ -5736,12 +5736,6 @@
   <group>
     <name>Board</name>
     <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_camera.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_camera.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\..\..\App\Liuzw_control.c</name>
     </file>
     <file>
@@ -5760,6 +5754,12 @@
       <name>$PROJ_DIR$\..\..\App\Liuzw_led.h</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\..\..\App\Liuzw_oled.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\App\Liuzw_oled.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\App\PC_link.c</name>
     </file>
     <file>
@@ -5770,6 +5770,12 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_BMP.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\VCAN_camera.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\inc\VCAN_camera.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_computer.c</name>
@@ -5830,12 +5836,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_UI_VAR.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\zet_oled.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\zet_oled.h</name>
     </file>
   </group>
   <group>

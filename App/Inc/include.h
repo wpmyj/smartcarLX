@@ -20,6 +20,7 @@
 #include  "MK60_dac.h"      //DAC
 #include  "MK60_dma.h"      //DMA
 #include  "MK60_FLASH.h"    //FLASH
+#include  "VCAN_OV7725_Eagle.h"    //FLASH
 
 #include  "Liuzw_led.H"          //LED
 #include  "zet_oled.h"

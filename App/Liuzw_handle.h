@@ -1,8 +1,8 @@
 #ifndef __LIUZW_HANDLE_H__
 #define __LIUZW_HANDLE_H__
 
-#include "Liuzw_camera.h"
-
+//#include "Liuzw_camera.h"
+#include "VCAN_OV7725_Eagle.h"
 #define  ROW_MAX    60
 #define  COLUMN_MAX 80
 

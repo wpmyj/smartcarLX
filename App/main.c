@@ -1,7 +1,7 @@
 #include "common.h"
 #include "include.h"
 #include "MK60_it.h"
-#include "zet_oled.h"
+#include "Liuzw_oled.h"
 //#include "Liuzw_camera.h"
 #include "Liuzw_handle.h"
 #include "Liuzw_control.h"
@@ -10,6 +10,8 @@
 
 char Para_Name[7][12]={"PID_ANGLE_P\0","PID_ANGLE_D\0","PID_SPEED_P\0",
 "PID_SPEED_I\0","PID_SPEED_D\0","PID_DIREC_P\0","PID_DIREC_D\0"};
+
+
 
 //float PID_ANGLE_P,PID_ANGLE_D,PID_SPEED_P,PID_SPEED_I,PID_SPEED_D,PID_TURN_P,PID_TURN_D;
 
@@ -22,8 +24,12 @@ uint8 Oled_Show=1,Para_Index=0,Para_Checked=0,Para_Index_Limit=7,Step_Index=3;
 
 float Step[8]={0.0001,0.001,0.01,0.1,1.0,10.0,100.0,1000.0};   //默认调节步长为0.01
 
+void zet_motor(void);
+void steer(void);
+void zet_oled();
+void zet_camera();
 
-void OLED_Draw_UI()
+/*void OLED_Draw_UI()
 {
      uint8 i;
      OLED_P6x8Str(0,0,"Voltage=");                          //显示电池电压
@@ -53,12 +59,9 @@ void OLED_Draw_UI()
       
     }
      
-}
+}*/
 
 
-void zet_motor(void);
-void steer(void);
-void zet_oled();
 
 void  main(void)
 { 
@@ -66,6 +69,7 @@ void  main(void)
     zet_motor();
     steer();
     zet_oled();
+    zet_camera();
     while (1)
     {
       led_set(LED0,LED_ON);
@@ -115,12 +119,56 @@ void steer(void){
 }
 
 void zet_oled(){
-  OLED_Init();
-  OLED_Draw_Logo();
+  oled_init();
+  oled_display_on();
+  oled_show_logo();
   DELAY_MS(2000);
-  OLED_CLS();
-  while(1)
+  oled_clear();
+}
+
+void zet_camera(void){
+/*  Site_t site     = {0, 0};                           //显示图像左上角位置
+    Size_t imgsize  = {CAMERA_W, CAMERA_H};             //图像大小
+    Size_t size;                   //显示区域图像大小
+*/
+    //LCD_init();
+    //LCD_str            (site,"Cam init ing",FCOLOUR,BCOLOUR);
+
+    //size.H = LCD_H;
+    //size.W = LCD_W;
+
+    camera_init(imgbuff);
+
+    //LCD_str            (site,"Cam init OK!",FCOLOUR,BCOLOUR);
+    //site.y = 110;
+    //LCD_FSTR_CH(site,vcan_str,FCOLOUR,BCOLOUR);
+
+    //配置中断服务函数
+    set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置 PORTA 的中断服务函数为 PORTA_IRQHandler
+    set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置 DMA0 的中断服务函数为 PORTA_IRQHandler
+
+    while(1)
     {
-      if(Oled_Show)OLED_Draw_UI();
+        camera_get_img();                                   //摄像头获取图像
+        img_extract((uint8*)img,imgbuff,CAMERA_SIZE);//二值化图像
+
+        oled_show_picture();//oled显示采集的图像    
+                      //黑白摄像头
+        //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
+
+        /******************** 山外多功能调试助手 【黑白模式】 发送图像到上位机 ***********************/
+        //vcan_sendimg(imgbuff, sizeof(imgbuff));
+
+        /******************** 山外多功能调试助手 【灰度模式】 发送图像到上位机 ***********************/
+        //img_extract(img, imgbuff, CAMERA_SIZE);          //解压为灰度图像，方便发送到上位机显
+        //vcan_sendimg(img, sizeof(img));
+
+        /******************** 发送图像到上位机 ***********************/
+        //img_extract(img, imgbuff, CAMERA_SIZE);          //解压为灰度图像，方便发送到上位机显
+        //sendimg(img, CAMERA_W * CAMERA_H);                    //发送到上位机
     }
 }
+
+
+
+ 

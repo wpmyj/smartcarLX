@@ -10,7 +10,8 @@
 #include "Liuzw_handle.h"
 #include "MK60_it.h"
 #include "Liuzw_oled.h"
-#include "Liuzw_camera.h"
+//#include "Liuzw_camera.h"
+#include "VCAN_OV7725_Eagle.h"
 //#include "Liuzw_menu.h"
 //#include "Liuzw_buzzer.h"
 

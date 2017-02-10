@@ -1,11 +1,11 @@
 #ifndef __LIUZW_OLED_H__
 #define __LIUZW_OLED_H__
 
-#define OLED_SCLK_Pin    PTA10     //D0
-#define OLED_SDIN_Pin    PTA9      //D1
-#define OLED_RST_Pin     PTA8      //RST
-#define OLED_DC_Pin      PTA7      //DC
-#define OLED_CS_Pin      PTA6      //CS
+#define OLED_SCLK_Pin    PTC13     //D0
+#define OLED_SDIN_Pin    PTC11      //D1
+#define OLED_RST_Pin     PTC10     //RST
+#define OLED_DC_Pin      PTC9      //DC
+//#define OLED_CS_Pin      PTA6      //CS
 
 #define OLED_SCLK_Clr()   PTXn_T(OLED_SCLK_Pin,OUT)=0//CLK
 #define OLED_SCLK_Set()   PTXn_T(OLED_SCLK_Pin,OUT)=1
@@ -19,7 +19,7 @@
 #define OLED_DC_Clr()     PTXn_T(OLED_DC_Pin,OUT)=0//DC
 #define OLED_DC_Set()     PTXn_T(OLED_DC_Pin,OUT)=1
  		     
-#define OLED_CS_Clr()     PTXn_T(OLED_CS_Pin,OUT)=0//CS
+//#define OLED_CS_Clr()     PTXn_T(OLED_CS_Pin,OUT)=0//CS
 #define OLED_CS_Set()     PTXn_T(OLED_CS_Pin,OUT)=1
 
 #define Max_Column	128

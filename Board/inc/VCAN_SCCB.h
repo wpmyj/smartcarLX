@@ -19,8 +19,8 @@
 #define _VCAN_SCCB_H_
 
 //SCCB π‹Ω≈≈‰÷√
-#define SCCB_SCL        PTA26
-#define SCCB_SDA        PTA25
+#define SCCB_SCL        PTB9
+#define SCCB_SDA        PTB11
 
 
 #define SCL_H()         PTXn_T(SCCB_SCL,OUT) = 1

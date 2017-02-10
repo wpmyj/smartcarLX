@@ -19,7 +19,7 @@
 #include "MK60_dma.h"
 #include "MK60_pit.h"
 #include "MK60_uart.h"
-#include "Liuzw_camera.h"
+#include "include.h"
 #include "PC_link.h"
 #include "Liuzw_led.h"
 #include "Liuzw_control.h"
@@ -33,7 +33,7 @@ bool Second_Flag;//1s中断标志位，防止程序卡死
  */
 void PORTA_IRQHandler()
 {
-    uint8  n = 0;    //引脚号
+    /*uint8  n = 0;    //引脚号
     uint32 flag = PORTA_ISFR;
     PORTA_ISFR  = ~0;                    //清中断标志位
 	
@@ -41,7 +41,26 @@ void PORTA_IRQHandler()
     if(flag & (1 << n))                  //PTA27触发中断
     {
         camera_vsync();
+    }*/
+      uint8  n;    //引脚号
+    uint32 flag;
+
+    while(!PORTA_ISFR);
+    flag = PORTA_ISFR;
+    PORTA_ISFR  = ~0;                                   //清中断标志位
+
+    n = 25;                                             //场中断
+    if(flag & (1 << n))                                 //PTA29触发中断
+    {
+        camera_vsync();
     }
+#if 0                           //不使用行中断
+    n = 28;
+    if(flag & (1 << n))                                 //PTA28触发中断
+    {
+        camera_href();
+    }
+#endif
 }
 
 /*!

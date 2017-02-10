@@ -6,7 +6,8 @@
  */
 #include "common.h"
 #include "Liuzw_handle.h"
-#include "Liuzw_camera.h"
+//#include "Liuzw_camera.h"
+#include "VCAN_OV7725_Eagle.h"
 #include "MK60_uart.h"
 #include "Liuzw_oled.h"
 
