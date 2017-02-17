@@ -98,14 +98,14 @@ void  main(void)
 }
 
 void zet_motor(void){
-    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_A,MOTOR_HZ_A,0);//驱动FTM初始化
+    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_A,MOTOR_HZ,0);//驱动FTM初始化
     gpio_init(MOTOR_DIR1_PIN,GPO,0);//驱动正向使能初始化
     gpio_init(MOTOR_DIR2_PIN,GPO,0);//驱动反向使能初始化
     gpio_set(MOTOR_DIR1_PIN,1);//驱动正向使能初始化
     gpio_set(MOTOR_DIR2_PIN,0);//驱动正向使能初始化
     ftm_pwm_duty(MOTOR_FTM_A,MOTOR_CH_A,76);
     
-    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_B,MOTOR_HZ_B,0);//驱动FTM初始化
+    ftm_pwm_init(MOTOR_FTM_B,MOTOR_CH_B,MOTOR_HZ,0);//驱动FTM初始化
     gpio_init(MOTOR_DIR3_PIN,GPO,0);//驱动正向使能初始化
     gpio_init(MOTOR_DIR4_PIN,GPO,0);//驱动反向使能初始化
     gpio_set(MOTOR_DIR3_PIN,0);//驱动正向使能初始化
