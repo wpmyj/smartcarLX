@@ -1,11 +1,11 @@
 #include "common.h"
-
+#include "VCAN_camera.h"
 
 //压缩二值化图像解压（空间 换 时间 解压）
 //srclen 是二值化图像的占用空间大小
 //【鹰眼解压】鹰眼图像解压，转为 二维数组 - 智能车资料区 - 山外论坛 http://vcan123.com/forum.php?mod=viewthread&tid=17&ctid=6
 //解压的时候，里面有个数组，配置黑、白对应的值是多少。
-void img_extract(uint8 *dst, uint8 *src, uint32 srclen)
+void img_extract(void *dst, void *src, uint32_t srclen)
 {
     uint8_t colour[2] = {255, 0}; //0 和 1 分别对应的颜色
     uint8_t * mdst = dst;

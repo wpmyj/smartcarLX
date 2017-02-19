@@ -115,10 +115,10 @@ typedef enum
 
 typedef enum      //DMA每次传输字节数
 {
-    DMA_BYTE1 = 1,
-    DMA_BYTE2 = 2,
-    DMA_BYTE4 = 4,
-    DMA_BYTE16 = 16
+    DMA_BYTE1 = 0,
+    DMA_BYTE2 = 1,
+    DMA_BYTE4 = 2,
+    DMA_BYTE16 = 4
 } DMA_BYTEn;
 
 

@@ -1,174 +1,165 @@
+/*!
+ *     COPYRIGHT NOTICE
+ *     Copyright (c) 2013,山外科技
+ *     All rights reserved.
+ *     技术讨论：山外论坛 http://www.vcan123.com
+ *
+ *     除注明出处外，以下所有内容版权均属山外科技所有，未经允许，不得用于商业用途，
+ *     修改内容时必须保留山外科技的版权声明。
+ *
+ * @file       main.c
+ * @brief      山外K60 平台主程序
+ * @author     山外科技
+ * @version    v5.0
+ * @date       2013-08-28
+ */
+
 #include "common.h"
 #include "include.h"
-#include "MK60_it.h"
-#include "Liuzw_oled.h"
-//#include "Liuzw_camera.h"
-#include "Liuzw_handle.h"
-#include "Liuzw_control.h"
-//#include "Liuzw_menu.h"
-//#include "Liuzw_buzzer.h"
 
-char Para_Name[7][12]={"PID_ANGLE_P\0","PID_ANGLE_D\0","PID_SPEED_P\0",
-"PID_SPEED_I\0","PID_SPEED_D\0","PID_DIREC_P\0","PID_DIREC_D\0"};
+uint8 imgbuff[CAMERA_SIZE];                             //定义存储接收图像的数组
+//uint8 img[CAMERA_W*CAMERA_H];
 
-
-
-//float PID_ANGLE_P,PID_ANGLE_D,PID_SPEED_P,PID_SPEED_I,PID_SPEED_D,PID_TURN_P,PID_TURN_D;
-
-float Control_Para[7];
-
-
-float Voltage=7.26;
-
-uint8 Oled_Show=1,Para_Index=0,Para_Checked=0,Para_Index_Limit=7,Step_Index=3;
-
-float Step[8]={0.0001,0.001,0.01,0.1,1.0,10.0,100.0,1000.0};   //默认调节步长为0.01
-
+//函数声明
+void PORTA_IRQHandler();
+void DMA0_IRQHandler();
 void zet_motor(void);
 void steer(void);
 void zet_oled();
 void zet_camera();
 
-/*void OLED_Draw_UI()
-{
-     uint8 i;
-     OLED_P6x8Str(0,0,"Voltage=");                          //显示电池电压
-     OLED_PrintValueF(48, 0,Voltage,2);                     
-     OLED_PrintValueF(72, 0,Step[Step_Index],5);            //显示调节步进值
-     
-    for(i=0;i<7;i++)
-    {
-     if(i==Para_Index&&Para_Checked==false)
-      {
-       reverse=1;
-       OLED_P6x8Str(0,i+1,Para_Name[i]);   //将参量名反转显示
-       reverse=0;
-      }
-      else OLED_P6x8Str(0,i+1,Para_Name[i]);
+//void img_extract(uint8 *dst, uint8 *src, uint32 srclen);
 
-    
-     OLED_P6x8Char('=');
-    
-      if(i==Para_Index&&Para_Checked)
-      {
-        reverse=1;
-        OLED_PrintValueF(72, i+1,Control_Para[i],5);
-        reverse=0;
-      }
-      else  OLED_PrintValueF(72, i+1,Control_Para[i],5);
-      
-    }
-     
-}*/
-
-
-
+/*!
+ *  @brief      main函数
+ *  @since      v5.3
+ *  @note       山外摄像头 LCD 测试实验
+ */
 void  main(void)
-{ 
-    led_init(LED0);
+{
     zet_motor();
     steer();
     zet_oled();
-    zet_camera();
-    while (1)
-    {
-      led_set(LED0,LED_ON);
-      DELAY_MS(1000);
-      led_set(LED0,LED_OFF);
-      DELAY_MS(1000);
-    }
-    
-    /*init_all(); 
-	 
-		while(1)
-		{
-			
-        camera_get_img();//采集赛道
-        img_extract((uint8*)img, imgbuff,CAMERA_SIZE);  //挤压图像
-        search_line();
-        cal_valid_row();
-        road_type();
-        cal_middle();
-        cal_error();
-        //send_data();
-        vcan_sendimg(imgbuff, CAMERA_SIZE);//发送到上位机
-      	oled_show_picture();//oled显示赛道
-  
-		}*/
-}
-
-void zet_motor(void){
-    ftm_pwm_init(MOTOR_FTM_A,MOTOR_CH_A,MOTOR_HZ,0);//驱动FTM初始化
-    gpio_init(MOTOR_DIR1_PIN,GPO,0);//驱动正向使能初始化
-    gpio_init(MOTOR_DIR2_PIN,GPO,0);//驱动反向使能初始化
-    gpio_set(MOTOR_DIR1_PIN,1);//驱动正向使能初始化
-    gpio_set(MOTOR_DIR2_PIN,0);//驱动正向使能初始化
-    ftm_pwm_duty(MOTOR_FTM_A,MOTOR_CH_A,76);
-    
-    ftm_pwm_init(MOTOR_FTM_B,MOTOR_CH_B,MOTOR_HZ,0);//驱动FTM初始化
-    gpio_init(MOTOR_DIR3_PIN,GPO,0);//驱动正向使能初始化
-    gpio_init(MOTOR_DIR4_PIN,GPO,0);//驱动反向使能初始化
-    gpio_set(MOTOR_DIR3_PIN,0);//驱动正向使能初始化
-    gpio_set(MOTOR_DIR4_PIN,1);//驱动正向使能初始化
-    ftm_pwm_duty(MOTOR_FTM_B,MOTOR_CH_B,76);
-}
-
-void steer(void){
-  ftm_pwm_init(SERVO_FTM,SERVO_CH,SERVO_HZ,SERVO_MIDDLE);//舵机FTM初始化
-  ftm_pwm_duty(SERVO_FTM,SERVO_CH,8650);
-}
-
-void zet_oled(){
-  oled_init();
-  oled_display_on();
-  oled_show_logo();
-  DELAY_MS(2000);
-  oled_clear();
-}
-
-void zet_camera(void){
-/*  Site_t site     = {0, 0};                           //显示图像左上角位置
-    Size_t imgsize  = {CAMERA_W, CAMERA_H};             //图像大小
-    Size_t size;                   //显示区域图像大小
-*/
-    //LCD_init();
-    //LCD_str            (site,"Cam init ing",FCOLOUR,BCOLOUR);
-
-    //size.H = LCD_H;
-    //size.W = LCD_W;
-
-    camera_init(imgbuff);
-
-    //LCD_str            (site,"Cam init OK!",FCOLOUR,BCOLOUR);
-    //site.y = 110;
-    //LCD_FSTR_CH(site,vcan_str,FCOLOUR,BCOLOUR);
-
+     camera_init(imgbuff);
     //配置中断服务函数
-    set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置 PORTA 的中断服务函数为 PORTA_IRQHandler
-    set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置 DMA0 的中断服务函数为 PORTA_IRQHandler
+    set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
+    set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
 
     while(1)
     {
         camera_get_img();                                   //摄像头获取图像
         img_extract((uint8*)img,imgbuff,CAMERA_SIZE);//二值化图像
-
-        oled_show_picture();//oled显示采集的图像    
-                      //黑白摄像头
+        oled_show_picture();
+        //黑白摄像头
         //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
+        vcan_sendimg(imgbuff,CAMERA_SIZE);
 
-        /******************** 山外多功能调试助手 【黑白模式】 发送图像到上位机 ***********************/
-        //vcan_sendimg(imgbuff, sizeof(imgbuff));
-
-        /******************** 山外多功能调试助手 【灰度模式】 发送图像到上位机 ***********************/
-        //img_extract(img, imgbuff, CAMERA_SIZE);          //解压为灰度图像，方便发送到上位机显
-        //vcan_sendimg(img, sizeof(img));
-
-        /******************** 发送图像到上位机 ***********************/
-        //img_extract(img, imgbuff, CAMERA_SIZE);          //解压为灰度图像，方便发送到上位机显
-        //sendimg(img, CAMERA_W * CAMERA_H);                    //发送到上位机
     }
+    //zet_camera();   
 }
 
 
+/*!
+ *  @brief      PORTA中断服务函数
+ *  @since      v5.0
+ */
+void PORTA_IRQHandler()
+{
+    uint8  n;    //引脚号
+    uint32 flag;
 
- 
+    while(!PORTA_ISFR);
+    flag = PORTA_ISFR;
+    PORTA_ISFR  = ~0;                                   //清中断标志位
+
+    n = 25;                                             //场中断
+    if(flag & (1 << n))                                 //PTA29触发中断
+    {
+        camera_vsync();
+    }
+#if ( CAMERA_USE_HREF == 1 )                            //使用行中断
+    n = 28;
+    if(flag & (1 << n))                                 //PTA28触发中断
+    {
+        camera_href();
+    }
+#endif
+
+
+}
+
+/*!
+ *  @brief      DMA0中断服务函数
+ *  @since      v5.0
+ */
+void DMA0_IRQHandler()
+{
+    camera_dma();
+}
+
+
+void zet_motor(void){
+    ftm_pwm_init(FTM2,FTM_CH1,10000,0);//驱动FTM初始化
+    gpio_init(PTC3,GPO,0);//驱动正向使能初始化
+    gpio_init(PTC2,GPO,0);//驱动反向使能初始化
+    gpio_set(PTC3,1);//驱动正向使能初始化
+    gpio_set(PTC2,0);//驱动正向使能初始化
+    ftm_pwm_duty(FTM2,FTM_CH1,56);
+    
+    ftm_pwm_init(FTM2,FTM_CH0,10000,0);//驱动FTM初始化
+    gpio_init(PTB17,GPO,0);//驱动正向使能初始化
+    gpio_init(PTB16,GPO,0);//驱动反向使能初始化
+    gpio_set(PTB17,0);//驱动正向使能初始化
+    gpio_set(PTB16,1);//驱动正向使能初始化
+    ftm_pwm_duty(FTM2,FTM_CH0,56);
+}
+
+void steer(void){
+  ftm_pwm_init(FTM0,FTM_CH3,100,5000);//舵机FTM初始化
+  ftm_pwm_duty(FTM0,FTM_CH3,8650);
+}
+
+void zet_oled(){
+  oled_init();
+  oled_display_on();
+  //oled_show_logo();
+  oled_show_num(20,6,10,0,1);
+  
+}
+
+void zet_camera(void){
+    camera_init(imgbuff);
+    //配置中断服务函数
+    set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
+    set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
+
+    while(1)
+    {
+        camera_get_img();                                   //摄像头获取图像
+        oled_show_picture();
+        //黑白摄像头
+        //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
+        //vcan_sendimg(imgbuff,CAMERA_SIZE);
+
+    }
+}
+
+/*void img_extract(uint8 *dst, uint8 *src, uint32 srclen)
+{
+    uint8 colour[2] = {0,1}; //0 和 1 分别对应的颜色
+    //注：野火的摄像头 0 表示 白色，1表示 黑色
+    uint8 tmpsrc;
+    while(srclen --)
+    {
+        tmpsrc = *src++;
+        *dst++ = colour[ (tmpsrc >> 7 ) & 0x01 ]; //判断一个字节从高位到低位
+        *dst++ = colour[ (tmpsrc >> 6 ) & 0x01 ];
+        *dst++ = colour[ (tmpsrc >> 5 ) & 0x01 ];
+        *dst++ = colour[ (tmpsrc >> 4 ) & 0x01 ];
+        *dst++ = colour[ (tmpsrc >> 3 ) & 0x01 ];
+        *dst++ = colour[ (tmpsrc >> 2 ) & 0x01 ];
+        *dst++ = colour[ (tmpsrc >> 1 ) & 0x01 ];
+        *dst++ = colour[ (tmpsrc >> 0 ) & 0x01 ];
+    }
+}*/
+

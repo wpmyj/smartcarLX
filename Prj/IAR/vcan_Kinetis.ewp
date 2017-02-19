@@ -4824,7 +4824,7 @@
         </option>
         <option>
           <name>OGCoreOrChip</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>GRuntimeLibSelect</name>
@@ -4998,7 +4998,7 @@
         </option>
         <option>
           <name>CCDebugInfo</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IEndianMode</name>
@@ -5736,34 +5736,16 @@
   <group>
     <name>Board</name>
     <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_control.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\handle.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_control.h</name>
+      <name>$PROJ_DIR$\..\..\Board\inc\handle.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_handle.c</name>
+      <name>$PROJ_DIR$\..\..\Board\src\oled.c</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_handle.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_led.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_led.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_oled.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\Liuzw_oled.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\PC_link.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\App\PC_link.h</name>
+      <name>$PROJ_DIR$\..\..\Board\inc\oled.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_ASCII.c</name>
@@ -5773,9 +5755,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_camera.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\Board\inc\VCAN_camera.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_computer.c</name>
@@ -5803,6 +5782,9 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_LCD_ST7735S.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\src\VCAN_LED.C</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_MMA7455.c</name>

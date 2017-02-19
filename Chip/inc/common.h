@@ -40,12 +40,6 @@ typedef volatile uint16     vuint16; /* 16 bits */
 typedef volatile uint32     vuint32; /* 32 bits */
 typedef volatile uint64     vuint64; /* 64 bits */
 
-typedef enum _bool
-{
-    false = 0,
-    true  
-}bool;
-
 /*
  * 定义带位域的联合体类型
  */
