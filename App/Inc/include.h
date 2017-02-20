@@ -45,7 +45,7 @@
 #include  "VCAN_computer.h"     //多功能调试助手
 
 
-#include "oled.h"
+#include "SEEKFREE_OLED.h"
 #include "handle.h"
 
 #endif  //__INCLUDE_H__

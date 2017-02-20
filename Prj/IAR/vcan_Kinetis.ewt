@@ -536,10 +536,13 @@
       <name>$PROJ_DIR$\..\..\Board\inc\handle.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\src\oled.c</name>
+      <name>$PROJ_DIR$\..\..\Board\inc\oled.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\..\..\Board\inc\oled.h</name>
+      <name>$PROJ_DIR$\..\..\Board\src\SEEKFREE_OLED.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\inc\SEEKFREE_OLED.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\Board\src\VCAN_ASCII.c</name>

@@ -3,7 +3,7 @@
 #include "include.h"
 //#include "function.h"
 
-uint8 img[60][80];
+uint8 img[CAMERA_W*CAMERA_H];
 int8 Road_Left[ROW_MAX]={0};//左线位置_列标
 int8 Road_Right[ROW_MAX]={0};//右线位置_列标
 int8 Road_Center[ROW_MAX]={0};//中心位置_列标
@@ -82,7 +82,7 @@ void Servo_PID();
 //uint8 img[60][80];
 
 //
-void Search_Line(void)
+/*void Search_Line(void)
 {
    uint8 Row_Ptr=0;
    uint8 Col_Ptr=0;
@@ -403,7 +403,7 @@ void Search_Line(void)
         
    }//结束for 行循环
 }
-
+*/
 //void Flag_judge(int Row)
 //{
 //  uint8 Left_BlackCnt=0;
@@ -686,7 +686,7 @@ void Edge_Filter()
       Road_Right[Row_Ptr]=79;
   }
 }
-void Find_Middle()
+/*void Find_Middle()
 {
     uint8 Row_Ptr=0; 
     uint8 CutLen=8;
@@ -742,4 +742,4 @@ void Find_Middle()
     //结束for_滤中线
 }
 
-
+*/

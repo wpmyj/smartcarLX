@@ -2,7 +2,7 @@
  *     COPYRIGHT NOTICE
  *     Copyright (c) 2013,山外科技
  *     All rights reserved.
- *     技术讨论：山外论坛 http://www.vcan123.com
+ *     技术讨论：山外初学论坛 http://www.vcan123.com
  *
  *     除注明出处外，以下所有内容版权均属山外科技所有，未经允许，不得用于商业用途，
  *     修改内容时必须保留山外科技的版权声明。
@@ -52,7 +52,7 @@ uint8 ov7725_eagle_init(uint8 *imgaddr)
  */
 void ov7725_eagle_port_init()
 {
-    //DMA通道0初始化，PTA27触发源(默认上升沿)，源地址为PTB_B0_IN，目的地址为：IMG_BUFF，每次传输1Byte
+    //DMA通道0初始化，PTA27触发源(默认上升沿)，源地址为(PTC_B1_IN)PTB_B0_IN，目的地址为：IMG_BUFF，每次传输1Byte
     dma_portx2buff_init(CAMERA_DMA_CH, (void *)&PTB_B0_IN, (void *)ov7725_eagle_img_buff, PTA24, DMA_BYTE1, CAMERA_DMA_NUM, DADDR_KEEPON);
 
     DMA_DIS(CAMERA_DMA_CH);
@@ -60,9 +60,9 @@ void ov7725_eagle_port_init()
     DMA_IRQ_CLEAN(CAMERA_DMA_CH);                   //清除通道传输中断标志位
     DMA_IRQ_EN(CAMERA_DMA_CH);
 
-    port_init(PTA24, ALT1 | DMA_FALLING | PULLDOWN );         //PCLK
+    port_init(PTA24, ALT1 | DMA_FALLING | PULLUP );         //PCLK
 
-    port_init(PTA25, ALT1 | IRQ_RISING  | PULLDOWN | PF);     //场中断，上拉，上降沿触发中断，带滤波
+    port_init(PTA25, ALT1 | IRQ_RISING | PULLUP | PF);     //场中断，上拉，上降沿触发中断，带滤波
 
 }
 
@@ -79,18 +79,9 @@ void ov7725_eagle_vsync(void)
         ov7725_eagle_img_flag = IMG_GATHER;                  //标记图像采集中
         disable_irq(PORTA_IRQn);
 
-#if 1
-
-        PORTA_ISFR = 1 <<  PT24;            //清空PCLK标志位
-
-        DMA_EN(CAMERA_DMA_CH);                  //使能通道CHn 硬件请求
         PORTA_ISFR = 1 <<  PT24;            //清空PCLK标志位
         DMA_DADDR(CAMERA_DMA_CH) = (uint32)ov7725_eagle_img_buff;    //恢复地址
-
-#else
-        PORTA_ISFR = 1 <<  PT24;            //清空PCLK标志位
-        dma_repeat(CAMERA_DMA_CH, (void *)&PTB_B0_IN, (void *)ov7725_eagle_img_buff,CAMERA_DMA_NUM);
-#endif
+        DMA_EN(CAMERA_DMA_CH);                  //使能通道CHn 硬件请求
     }
     else                                        //图像采集错误
     {

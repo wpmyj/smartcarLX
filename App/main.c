@@ -49,7 +49,7 @@ void  main(void)
     {
         camera_get_img();                                   //摄像头获取图像
         img_extract((uint8*)img,imgbuff,CAMERA_SIZE);//二值化图像
-        oled_show_picture();
+        dis_bmp(60,80,img,0x4F); 
         //黑白摄像头
         //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
         vcan_sendimg(imgbuff,CAMERA_SIZE);
@@ -120,15 +120,16 @@ void steer(void){
 }
 
 void zet_oled(){
-  oled_init();
-  oled_display_on();
+  OLED_Init();
+  //oled_display_on();
   //oled_show_logo();
-  oled_show_num(20,6,10,0,1);
-  
+  OLED_Print_Num(20,6,10);
+  systick_delay_ms(2000);
+  OLED_Fill(0x00);
 }
 
 void zet_camera(void){
-    camera_init(imgbuff);
+    //camera_init(imgbuff);
     //配置中断服务函数
     set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
     set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
@@ -136,7 +137,7 @@ void zet_camera(void){
     while(1)
     {
         camera_get_img();                                   //摄像头获取图像
-        oled_show_picture();
+        //oled_show_picture();
         //黑白摄像头
         //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
         //vcan_sendimg(imgbuff,CAMERA_SIZE);
