@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2403347645</fileChecksum>
+  <fileChecksum>2161289512</fileChecksum>
   <configuration>
     <name>DZ10_Debug</name>
     <outputs/>
@@ -1601,10 +1601,6 @@
         </tool>
       </outputs>
       <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 79 262 29 117 81 73 232 249 75 256 64 84 254 49 197 165 200 195 201 199 196 230 35 38 51 94 250 259 31 4 194 59 198 7 160 91</file>
-        </tool>
         <tool>
           <name>ICCARM</name>
           <file> 79 262 29 117 81 73 232 249 75 256 64 84 254 49 197 165 200 195 201 199 196 230 35 38 51 94 250 259 31 4 194 59 198 7 160 91</file>

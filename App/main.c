@@ -27,7 +27,8 @@ void zet_motor(void);
 void steer(void);
 void zet_oled();
 void zet_camera();
-
+void PIT0_IRQHandler(void);
+void zf_oled(int16 val);
 //void img_extract(uint8 *dst, uint8 *src, uint32 srclen);
 
 /*!
@@ -37,6 +38,8 @@ void zet_camera();
  */
 void  main(void)
 {
+   ftm_quad_init(FTM1); 
+   pit_init_ms(PIT0, 500);
     zet_motor();
     steer();
     zet_oled();
@@ -44,12 +47,14 @@ void  main(void)
     //配置中断服务函数
     set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
     set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
-
+    set_vector_handler(PIT0_VECTORn ,PIT0_IRQHandler);
+    enable_irq (PIT0_IRQn);  
+    
     while(1)
     {
         camera_get_img();                                   //摄像头获取图像
         img_extract((uint8*)img,imgbuff,CAMERA_SIZE);//二值化图像
-        dis_bmp(60,80,img,0x4F); 
+        dis_bmp(CAMERA_H,CAMERA_W,(uint8*)img,0x7F); 
         //黑白摄像头
         //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
         vcan_sendimg(imgbuff,CAMERA_SIZE);
@@ -123,44 +128,31 @@ void zet_oled(){
   OLED_Init();
   //oled_display_on();
   //oled_show_logo();
-  OLED_Print_Num(20,6,10);
-  systick_delay_ms(2000);
+  //OLED_Print_Num(20,6,10);
+  //systick_delay_ms(2000);
   OLED_Fill(0x00);
 }
 
-void zet_camera(void){
-    //camera_init(imgbuff);
-    //配置中断服务函数
-    set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
-    set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
-
-    while(1)
-    {
-        camera_get_img();                                   //摄像头获取图像
-        //oled_show_picture();
-        //黑白摄像头
-        //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
-        //vcan_sendimg(imgbuff,CAMERA_SIZE);
-
-    }
-}
-
-/*void img_extract(uint8 *dst, uint8 *src, uint32 srclen)
+void PIT0_IRQHandler(void)
 {
-    uint8 colour[2] = {0,1}; //0 和 1 分别对应的颜色
-    //注：野火的摄像头 0 表示 白色，1表示 黑色
-    uint8 tmpsrc;
-    while(srclen --)
-    {
-        tmpsrc = *src++;
-        *dst++ = colour[ (tmpsrc >> 7 ) & 0x01 ]; //判断一个字节从高位到低位
-        *dst++ = colour[ (tmpsrc >> 6 ) & 0x01 ];
-        *dst++ = colour[ (tmpsrc >> 5 ) & 0x01 ];
-        *dst++ = colour[ (tmpsrc >> 4 ) & 0x01 ];
-        *dst++ = colour[ (tmpsrc >> 3 ) & 0x01 ];
-        *dst++ = colour[ (tmpsrc >> 2 ) & 0x01 ];
-        *dst++ = colour[ (tmpsrc >> 1 ) & 0x01 ];
-        *dst++ = colour[ (tmpsrc >> 0 ) & 0x01 ];
-    }
-}*/
 
+    int16 val;
+    val = ftm_quad_get(FTM1);          //获取FTM 正交解码 的脉冲数(负数表示反方向)
+    ftm_quad_clean(FTM1);
+    //zf_oled( val);
+    if(val>=0)
+    {
+        printf("\n正转：%d",val);
+    }
+    else
+    {
+        printf("\n反转：%d",-val);
+    }
+
+    PIT_Flag_Clear(PIT0);       //清中断标志位
+}
+void zf_oled(int16 val){
+  OLED_ClrPixel(70,88);
+  OLED_Print_Num(70,88,val);
+  systick_delay_ms(100);
+}

@@ -7,7 +7,7 @@
 #define  COLUMN_MAX 80
 #define line_width 2
 //extern int CAMERA_H=60,CAMERA_W=80;
-extern uint8 img[CAMERA_W*CAMERA_H];     //80*60  
+extern uint8 img[CAMERA_W][CAMERA_H];     //80*60  
 extern int8 Road_Left[ROW_MAX];
 extern int8 Road_Right[ROW_MAX];
 extern int8 Road_Center[ROW_MAX];

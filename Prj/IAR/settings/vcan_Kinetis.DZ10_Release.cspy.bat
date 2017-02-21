@@ -19,6 +19,6 @@
 @REM 
 
 
-"D:\xuexi2\SmartCar\IarForArm\common\bin\cspybat" "D:\xuexi2\SmartCar\IarForArm\arm\bin\armproc.dll" "D:\xuexi2\SmartCar\IarForArm\arm\bin\armjlink.dll"  %1 --plugin "D:\xuexi2\SmartCar\IarForArm\arm\bin\armbat.dll" --flash_loader "D:\xuexi2\SmartCar\IarForArm\arm\config\flashloader\Freescale\FlashK60Dxxx128K.board" --backend -B "--endian=little" "--cpu=Cortex-M4" "--fpu=None" "--drv_verify_download" "--semihosting=none" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=32" "--jlink_reset_strategy=0,0" "--drv_catch_exceptions=0x000" "--drv_swo_clock_setup=72000000,0,2000000" 
+"D:\xuexi2\SmartCar\IarForArm\common\bin\cspybat" "D:\xuexi2\SmartCar\IarForArm\arm\bin\armproc.dll" "D:\xuexi2\SmartCar\IarForArm\arm\bin\armjlink.dll"  %1 --plugin "D:\xuexi2\SmartCar\IarForArm\arm\bin\armbat.dll" --device_macro "D:\xuexi2\SmartCar\IarForArm\arm\config\debugger\Freescale\Kxx.dmac" --flash_loader "D:\xuexi2\SmartCar\IarForArm\arm\config\flashloader\Freescale\FlashK60Dxxx128K.board" --backend -B "--endian=little" "--cpu=Cortex-M4" "--fpu=None" "-p" "D:\xuexi2\SmartCar\IarForArm\arm\CONFIG\debugger\Freescale\MK60DN512Zxxx10.ddf" "--drv_verify_download" "--semihosting=none" "--device=MK60DN512Zxxx10" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=32" "--jlink_reset_strategy=0,0" "--drv_catch_exceptions=0x000" "--drv_swo_clock_setup=72000000,0,2000000" 
 
 
