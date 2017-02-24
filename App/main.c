@@ -27,27 +27,71 @@ void zet_motor(void);
 void steer(void);
 void zet_oled();
 void zet_camera();
-void PIT0_IRQHandler(void);
+//void PIT0_IRQHandler(void);
 void zf_oled(int16 val);
+void PIT1_IRQHandler();
+void xx_bluetooth();
+void uart3_handler(void);
 //void img_extract(uint8 *dst, uint8 *src, uint32 srclen);
 
 /*!
  *  @brief      main函数
  *  @since      v5.3
  *  @note       山外摄像头 LCD 测试实验
- */
+   */
 void  main(void)
 {
-   ftm_quad_init(FTM1); 
+     //zet_bluetooth();
+  
+     
+     DisableInterrupts;
+     NVIC_SetPriority(PORTA_IRQn,0);
+     NVIC_SetPriority(DMA0_IRQn,1);
+     
+     Init_All();
+     
+    // pit_init_ms(PIT1, 10);
+     EnableInterrupts;
+     
+     //set_vector_handler(PORTC_PORTD_VECTORn ,PORTC_PORTD_IRQHandler);
+     
+     set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);  
+     set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);    
+     //set_vector_handler(PIT1_VECTORn , PIT1_IRQHandler);    
+    // enable_irq (PIT1_IRQn);
+     
+     //设置 PORTE 的中断服务函数为 PORTE_VECTORn
+     //enable_irq(PORTC_PORTD_IRQn);
+     //int a=nrf_link_check();
+    while(1)
+    {
+       camera_get_img();                                   //摄像头获取图像
+        img_extract((uint8*)img,imgbuff,CAMERA_SIZE);//二值化图像
+        dis_bmp(CAMERA_H,CAMERA_W,(uint8*)img,0x7F);       
+        Search_Line();
+        Find_Middle();
+        vcan_sendimg(imgbuff,CAMERA_SIZE);
+        
+//        race[0]=2;
+//        race[1]=5;
+//        race[2]=7;
+//        nrf_tx(race,2);
+        //nrf_rx
+//        while(nrf_tx_state() == NRF_TXING);             //等待发送完成
+    }
+    
+    
+  /* ftm_quad_init(FTM1); 
    pit_init_ms(PIT0, 500);
     zet_motor();
     steer();
     zet_oled();
+    xx_bluetooth();
      camera_init(imgbuff);
     //配置中断服务函数
     set_vector_handler(PORTA_VECTORn , PORTA_IRQHandler);   //设置LPTMR的中断服务函数为 PORTA_IRQHandler
     set_vector_handler(DMA0_VECTORn , DMA0_IRQHandler);     //设置LPTMR的中断服务函数为 PORTA_IRQHandler
-    set_vector_handler(PIT0_VECTORn ,PIT0_IRQHandler);
+    //set_vector_handler(PIT0_VECTORn ,PIT0_IRQHandler);
     enable_irq (PIT0_IRQn);  
     
     while(1)
@@ -59,11 +103,15 @@ void  main(void)
         //LCD_Img_Binary_Z(site, size, imgbuff, imgsize);
         vcan_sendimg(imgbuff,CAMERA_SIZE);
 
-    }
+    }*/
     //zet_camera();   
 }
 
-
+void PIT1_IRQHandler(){
+  Search_Line();
+  Find_Middle();
+  Servo_control();
+}
 /*!
  *  @brief      PORTA中断服务函数
  *  @since      v5.0
@@ -109,23 +157,22 @@ void zet_motor(void){
     gpio_init(PTC2,GPO,0);//驱动反向使能初始化
     gpio_set(PTC3,1);//驱动正向使能初始化
     gpio_set(PTC2,0);//驱动正向使能初始化
-    ftm_pwm_duty(FTM2,FTM_CH1,56);
+    ftm_pwm_duty(FTM2,FTM_CH1,66);
     
     ftm_pwm_init(FTM2,FTM_CH0,10000,0);//驱动FTM初始化
     gpio_init(PTB17,GPO,0);//驱动正向使能初始化
     gpio_init(PTB16,GPO,0);//驱动反向使能初始化
     gpio_set(PTB17,0);//驱动正向使能初始化
     gpio_set(PTB16,1);//驱动正向使能初始化
-    ftm_pwm_duty(FTM2,FTM_CH0,56);
+    ftm_pwm_duty(FTM2,FTM_CH0,66);
 }
 
 void steer(void){
-  ftm_pwm_init(FTM0,FTM_CH3,100,5000);//舵机FTM初始化
-  ftm_pwm_duty(FTM0,FTM_CH3,8650);
+  ftm_pwm_init(FTM0,FTM_CH3,100,8500);//舵机FTM初始化
 }
 
 void zet_oled(){
-  OLED_Init();
+  
   //oled_display_on();
   //oled_show_logo();
   //OLED_Print_Num(20,6,10);
@@ -133,26 +180,30 @@ void zet_oled(){
   OLED_Fill(0x00);
 }
 
-void PIT0_IRQHandler(void)
-{
 
-    int16 val;
-    val = ftm_quad_get(FTM1);          //获取FTM 正交解码 的脉冲数(负数表示反方向)
-    ftm_quad_clean(FTM1);
-    //zf_oled( val);
-    if(val>=0)
-    {
-        printf("\n正转：%d",val);
-    }
-    else
-    {
-        printf("\n反转：%d",-val);
-    }
-
-    PIT_Flag_Clear(PIT0);       //清中断标志位
-}
 void zf_oled(int16 val){
   OLED_ClrPixel(70,88);
   OLED_Print_Num(70,88,val);
   systick_delay_ms(100);
+}
+
+void uart3_handler(void)
+{
+    char ch;
+
+    if(uart_query    (UART5) == 1)   //接收数据寄存器满
+    {
+        //用户需要处理接收数据
+        uart_getchar   (UART5, &ch);                    //无限等待接受1个字节
+        uart_putchar   (UART5 , ch);                    //发送字符串
+        uart_putstr   (UART5 ,"\n\n\n接收中断测试：");
+    }
+}
+
+void xx_bluetooth()
+{
+    uart_init(UART5,9600);     //初始化串口(UART3 是工程里配置为printf函数输出端口，故已经进行初始化)
+    uart_putstr   (UART5 ,"\n\n\n接收中断测试：");           //发送字符串
+    set_vector_handler(UART5_RX_TX_VECTORn,uart3_handler);   // 设置中断服务函数到中断向量表里
+    uart_rx_irq_en (UART5);                                 //开串口接收中断
 }

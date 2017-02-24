@@ -36,8 +36,8 @@
 #define UART4_RX_PIN    PTC14       //PTC14、PTE25
 #define UART4_TX_PIN    PTC15       //PTC15、PTE24
 
-#define UART5_RX_PIN    PTE9        //PTD8、PTE9
-#define UART5_TX_PIN    PTE8        //PTD9、PTE8
+#define UART5_RX_PIN    PTD8        //PTD8、PTE9
+#define UART5_TX_PIN    PTD9        //PTD9、PTE8
 
 /**********************************  FTM    ***************************************/
 

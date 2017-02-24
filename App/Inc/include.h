@@ -47,5 +47,5 @@
 
 #include "SEEKFREE_OLED.h"
 #include "handle.h"
-
+#include "function.h"
 #endif  //__INCLUDE_H__

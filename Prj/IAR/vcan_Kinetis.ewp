@@ -5736,6 +5736,12 @@
   <group>
     <name>Board</name>
     <file>
+      <name>$PROJ_DIR$\..\..\Board\src\function.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\..\Board\inc\function.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\..\..\Board\src\handle.c</name>
     </file>
     <file>
