@@ -46,7 +46,7 @@ void Init_All(void)
   Motor_Init();
   OLED_Init();
   ov7725_eagle_init(imgbuff);
-  //xx_bluetooth();
+  xx_bluetooth();
   //PID_Init();
   //lptmr_pulse_init(LPT0_ALT2,0xFFFF , LPT_Rising);
   ftm_quad_init(FTM1);
@@ -84,7 +84,7 @@ void Motor_Init(void)
 
 void Motor_Out(void)
 {
-  speed_PWM=63;
+  speed_PWM=60;
  /* float speed_Ki=1.5;
   float speed_Kd=0.0;
   float speed_Kp=0.0;

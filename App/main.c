@@ -65,12 +65,12 @@ void  main(void)
      //int a=nrf_link_check();
     while(1)
     {
-       camera_get_img();                                   //摄像头获取图像
+        camera_get_img();                                   //摄像头获取图像
         img_extract((uint8*)img,imgbuff,CAMERA_SIZE);//二值化图像
         dis_bmp(CAMERA_H,CAMERA_W,(uint8*)img,0x7F);       
         Search_Line();
         Find_Middle();
-        vcan_sendimg(imgbuff,CAMERA_SIZE);
+        //vcan_sendimg(imgbuff,CAMERA_SIZE);
         
 //        race[0]=2;
 //        race[1]=5;
@@ -203,7 +203,7 @@ void uart3_handler(void)
 void xx_bluetooth()
 {
     uart_init(UART5,9600);     //初始化串口(UART3 是工程里配置为printf函数输出端口，故已经进行初始化)
-    uart_putstr   (UART5 ,"\n\n\n接收中断测试：");           //发送字符串
+    //uart_putstr   (UART5 ,"\n\n\n接收中断测试：");           //发送字符串
     set_vector_handler(UART5_RX_TX_VECTORn,uart3_handler);   // 设置中断服务函数到中断向量表里
     uart_rx_irq_en (UART5);                                 //开串口接收中断
 }
