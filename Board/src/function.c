@@ -17,6 +17,8 @@ void xx_bluetooth();
 void uart3_handler(void);
 extern uint8 imgbuff[CAMERA_SIZE];
 
+void xx_bluetooth();
+void uart5_handler(void);
 /*void PIT_IRQHandler(void)
 {
     if(PIT_TFLG(PIT0) == 1 )        //判断是否 PIT0 进入中断
@@ -118,4 +120,23 @@ void Motor_Out(void)
    ftm_pwm_duty(FTM2,FTM_CH1,(uint32)speed_PWM);
    ftm_pwm_duty(FTM2,FTM_CH0,(uint32)speed_PWM);
 }
+void xx_bluetooth()
+{
+    uart_init(UART5,9600);     //初始化串口(UART3 是工程里配置为printf函数输出端口，故已经进行初始化)
+    //uart_putstr   (UART5 ,"\n\n\n接收中断测试：");           //发送字符串
+    set_vector_handler(UART5_RX_TX_VECTORn,uart5_handler);   // 设置中断服务函数到中断向量表里
+    uart_rx_irq_en (UART5);                                 //开串口接收中断
+}
 
+void uart5_handler(void)
+{
+    char ch;
+
+    if(uart_query    (UART5) == 1)   //接收数据寄存器满
+    {
+        //用户需要处理接收数据
+        uart_getchar   (UART5, &ch);                    //无限等待接受1个字节
+        uart_putchar   (UART5 , ch);                    //发送字符串
+        uart_putstr   (UART5 ,"\n\n\n接收中断测试：");
+    }
+}

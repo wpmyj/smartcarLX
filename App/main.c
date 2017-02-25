@@ -30,8 +30,7 @@ void zet_camera();
 //void PIT0_IRQHandler(void);
 void zf_oled(int16 val);
 void PIT1_IRQHandler();
-void xx_bluetooth();
-void uart3_handler(void);
+
 //void img_extract(uint8 *dst, uint8 *src, uint32 srclen);
 
 /*!
@@ -70,7 +69,7 @@ void  main(void)
         dis_bmp(CAMERA_H,CAMERA_W,(uint8*)img,0x7F);       
         Search_Line();
         Find_Middle();
-        //vcan_sendimg(imgbuff,CAMERA_SIZE);
+        vcan_sendimg(imgbuff,CAMERA_SIZE);
         
 //        race[0]=2;
 //        race[1]=5;
@@ -187,23 +186,3 @@ void zf_oled(int16 val){
   systick_delay_ms(100);
 }
 
-void uart3_handler(void)
-{
-    char ch;
-
-    if(uart_query    (UART5) == 1)   //接收数据寄存器满
-    {
-        //用户需要处理接收数据
-        uart_getchar   (UART5, &ch);                    //无限等待接受1个字节
-        uart_putchar   (UART5 , ch);                    //发送字符串
-        uart_putstr   (UART5 ,"\n\n\n接收中断测试：");
-    }
-}
-
-void xx_bluetooth()
-{
-    uart_init(UART5,9600);     //初始化串口(UART3 是工程里配置为printf函数输出端口，故已经进行初始化)
-    //uart_putstr   (UART5 ,"\n\n\n接收中断测试：");           //发送字符串
-    set_vector_handler(UART5_RX_TX_VECTORn,uart3_handler);   // 设置中断服务函数到中断向量表里
-    uart_rx_irq_en (UART5);                                 //开串口接收中断
-}
